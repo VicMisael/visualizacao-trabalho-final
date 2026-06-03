@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FortalMap } from './map/map';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [FortalMap],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
   protected readonly title = signal('visualizacao-trabalho-final');
