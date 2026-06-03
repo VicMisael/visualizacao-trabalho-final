@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 
-export type MapLayer = 'bairros' | 'setores' | 'distritos' | 'subdistritos';
+export type MapLayer = 'bairros' | 'bairros_cornubados' | 'setores' | 'distritos' | 'subdistritos';
 
 const layerPaths: Record<MapLayer, string> = {
-  bairros: 'geojsons/BAIRROS.geojson',
+  bairros: 'geojsons/FORTALEZA_BAIRROS.geojson',
+  bairros_cornubados: 'geojsons/FORTALEZA_BAIRROS_CORNUBADOS.geojson',
   setores: 'geojsons/SETORES.geojson',
   distritos: 'geojsons/DISTRITOS.geojson',
   subdistritos: 'geojsons/SUBDISTRITOS.geojson',
