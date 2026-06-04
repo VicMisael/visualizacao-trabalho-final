@@ -1,6 +1,7 @@
 import { afterNextRender, Component, ElementRef, inject, viewChild } from '@angular/core';
 import * as d3 from 'd3';
-import { GeoDataService } from '../services/geo-data';
+import { GeoDataService } from '../../core/services/geo-data';
+
 
 @Component({
   selector: 'fortal-map',
