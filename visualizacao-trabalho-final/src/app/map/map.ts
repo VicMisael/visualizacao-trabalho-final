@@ -36,8 +36,6 @@ export class FortalMap {
     afterNextRender(() => {
       void this.initializeMap();
     });
-
-    this.currentDrillDownLevel.subscribe(x=>console.log(x))
   }
 
   private async initializeMap() {
@@ -52,9 +50,15 @@ export class FortalMap {
   }
 
   private async drawDetail() {
-    const geojson = (await this.geoData.loadLayer(DrillLevel.DISTRITOS)) as FortalezaFeatureCollection;
+    if (this.currentDrillDownLevel() != DrillLevel.DISTRITOS) {
+      const geojson = (await this.geoData.loadLayer(this.currentDrillDownLevel())) as FortalezaFeatureCollection;
 
-    this.renderDetail(geojson.features);
+      const transform = d3.zoomTransform(this.svg?.node()!);
+      this.renderDetail(this.getVisibleFeatures(geojson.features, transform));
+      return;
+    }
+
+    this.clearDetailLayer();
   }
 
   private async renderMap() {
@@ -62,7 +66,7 @@ export class FortalMap {
     const container = this.mapContainer().nativeElement;
 
     this.width = container.clientWidth || 900;
-    this.height = 600;
+    this.height = container.clientHeight;
 
     d3.select(container).selectAll('*').remove();
 
@@ -126,10 +130,12 @@ export class FortalMap {
 
 
 
-  private renderDetail(features:FortalezaMapFeature[]) {
+  private renderDetail(features: FortalezaMapFeature[]) {
     if (this.detailLayer == null || this.path == null) {
       return;
     }
+
+    // console.log("[Render DEtail]", features)
 
     this.detailLayer
       .selectAll('path')
@@ -139,12 +145,18 @@ export class FortalMap {
       .attr('fill', '#d8efe6')
       .attr('stroke', '#38514a')
       .attr('stroke-width', 0.6)
-      .on('click', (event, feature) => {
-        event.stopPropagation();
-        this.elementClicked.emit(feature);
-        this.zoomToFeature(feature);
-      });
+      .on('click', this.handleFeatureClick);
 
+  }
+
+  private handleFeatureClick(event: MouseEvent, feature: FortalezaMapFeature): void {
+    event.stopPropagation();
+    this.elementClicked.emit(feature);
+    this.zoomToFeature(feature);
+  }
+
+  private clearDetailLayer(): void {
+    this.detailLayer?.selectAll('*').remove();
   }
 
 
@@ -154,8 +166,8 @@ export class FortalMap {
 
 
 
-  private processZoom(event: any): void {
-    console.log("[Zoom level]",event.transform.k);
+  private processZoom(event: d3.D3ZoomEvent<SVGSVGElement, unknown>): void {
+    //console.log("[Zoom level]", event.transform.k);
     const k = event.transform.k;
     let d: DrillLevel = DrillLevel.DISTRITOS;
 
@@ -168,6 +180,48 @@ export class FortalMap {
     }
 
     this.currentDrillDownLevel.set(d)
+    this.drawDetail()
+  }
+
+  private getVisibleFeatures(
+    features: FortalezaMapFeature[],
+    transform: d3.ZoomTransform,
+  ): FortalezaMapFeature[] {
+    if (!this.path || this.width === 0 || this.height === 0) {
+      return [];
+    }
+
+    const viewportBounds = this.getViewportBounds(transform);
+
+    return features.filter((feature) => {
+      const featureBounds = this.path!.bounds(feature);
+
+      return this.boundsIntersect(featureBounds, viewportBounds);
+    });
+  }
+
+  private getViewportBounds(
+    transform: d3.ZoomTransform,
+  ): [[number, number], [number, number]] {
+    return [
+      transform.invert([0, 0]),
+      transform.invert([this.width, this.height]),
+    ];
+  }
+
+  private boundsIntersect(
+    featureBounds: [[number, number], [number, number]],
+    viewportBounds: [[number, number], [number, number]],
+  ): boolean {
+    const [[featureX0, featureY0], [featureX1, featureY1]] = featureBounds;
+    const [[viewportX0, viewportY0], [viewportX1, viewportY1]] = viewportBounds;
+
+    return (
+      featureX1 >= viewportX0 &&
+      featureX0 <= viewportX1 &&
+      featureY1 >= viewportY0 &&
+      featureY0 <= viewportY1
+    );
   }
 
   private zoomToFeature(
