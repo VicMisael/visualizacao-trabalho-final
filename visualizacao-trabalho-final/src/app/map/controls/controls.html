@@ -1,0 +1,10 @@
+<div class="drill-control" aria-label="Nivel de detalhamento do mapa">
+  @for (option of drillOptions; track option.value) {
+    <div
+      class="drill-control__button"
+      [class.drill-control__button--active]="drillLevel() === option.value"
+    >
+      {{ option.label }}
+  </div>
+  }
+</div>

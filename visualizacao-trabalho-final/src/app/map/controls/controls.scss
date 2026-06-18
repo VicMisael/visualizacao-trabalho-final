@@ -1,0 +1,28 @@
+.drill-control {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #cbd8d1;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgb(21 35 31 / 12%);
+}
+
+.drill-control__button {
+  min-height: 2rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid #b9c9c0;
+  border-radius: 6px;
+  background: #f5f8f6;
+  color: #243a34;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.875rem;
+}
+
+.drill-control__button--active {
+  border-color: #2f6f61;
+  background: #2f6f61;
+  color: #ffffff;
+}
