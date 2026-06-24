@@ -1,11 +1,8 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import embed, { VisualizationSpec } from 'vega-embed';
-
-type RendaDatum = {
-  NM_BAIRRO?: string;
-  rendimento: number;
-  [key: string]: unknown;
-};
+import { RendaDatum } from './models/chart-data.models';
+import { buildTopIncomeNeighborhoods } from './models/chart-data.utils';
+import { parseNumericValue } from './models/chart-data.models';
 
 type StackedDatum = {
   bairro: string;
@@ -31,7 +28,7 @@ export class IdadeSexoBairrosChartComponent implements AfterViewInit {
     const data = (await response.json()) as Array<Record<string, unknown>>;
 
     const chaveRenda = 'Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados';
-    const top10Renda = this.prepareData(data, chaveRenda);
+    const top10Renda = buildTopIncomeNeighborhoods(data, chaveRenda);
     const dados = this.buildStackedData(top10Renda);
     const faixas = ['0 a 14 anos', '15 a 29 anos', '30 a 59 anos', '60 anos ou mais'];
 
@@ -74,17 +71,6 @@ export class IdadeSexoBairrosChartComponent implements AfterViewInit {
     await embed(this.chartContainer.nativeElement, spec);
   }
 
-  private prepareData(data: Array<Record<string, unknown>>, chaveRenda: string): RendaDatum[] {
-    return data
-      .map((d) => ({
-        ...d,
-        NM_BAIRRO: typeof d['NM_BAIRRO'] === 'string' ? d['NM_BAIRRO'] : '',
-        rendimento: this.parseNumber(d[chaveRenda]),
-      }))
-      .sort((a, b) => b.rendimento - a.rendimento)
-      .slice(0, 10) as RendaDatum[];
-  }
-
   private buildStackedData(top10Renda: RendaDatum[]): StackedDatum[] {
     return top10Renda.flatMap((d) => {
       const masculino = {
@@ -110,20 +96,6 @@ export class IdadeSexoBairrosChartComponent implements AfterViewInit {
   }
 
   private sumRange(d: RendaDatum, keys: string[]): number {
-    return keys.reduce((acc, key) => acc + this.parseNumber(d[key]), 0);
-  }
-
-  private parseNumber(value: unknown): number {
-    if (typeof value === 'number') {
-      return Number.isFinite(value) ? value : 0;
-    }
-
-    if (typeof value === 'string') {
-      const normalized = value.replace(',', '.').trim();
-      const parsed = Number.parseFloat(normalized);
-      return Number.isFinite(parsed) ? parsed : 0;
-    }
-
-    return 0;
+    return keys.reduce((acc, key) => acc + parseNumericValue(d[key]), 0);
   }
 }

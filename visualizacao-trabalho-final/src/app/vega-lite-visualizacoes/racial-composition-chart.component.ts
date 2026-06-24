@@ -1,10 +1,7 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import embed, { VisualizationSpec } from 'vega-embed';
-
-type NeighborhoodDatum = Record<string, unknown> & {
-  NM_BAIRRO?: string;
-  total: number;
-};
+import { NeighborhoodDatum } from './models/chart-data.models';
+import { buildTopNeighborhoods } from './models/chart-data.utils';
 
 @Component({
   selector: 'app-racial-composition-chart',
@@ -22,7 +19,13 @@ export class RacialCompositionChartComponent implements AfterViewInit {
     const response = await fetch('/data/Base_Fortaleza_Consolidada.json');
     const data = (await response.json()) as Array<Record<string, unknown>>;
 
-    const top10Bairros = this.prepareData(data);
+    const top10Bairros = buildTopNeighborhoods(data, [
+      'Cor ou raça é parda',
+      'Cor ou raça é branca',
+      'Cor ou raça é preta',
+      'Cor ou raça é amarela',
+      'Cor ou raça é indígena',
+    ]);
 
     const spec: VisualizationSpec = {
       $schema: 'https://vega.github.io/schema/vega-lite/v6.json',
@@ -67,23 +70,4 @@ export class RacialCompositionChartComponent implements AfterViewInit {
     await embed(this.chartContainer.nativeElement, spec);
   }
 
-  private prepareData(data: Array<Record<string, unknown>>): NeighborhoodDatum[] {
-    return data
-      .map((d) => {
-        const neighborhoodName = typeof d['NM_BAIRRO'] === 'string' ? d['NM_BAIRRO'] : '';
-
-        return {
-          ...d,
-          NM_BAIRRO: neighborhoodName,
-          total:
-            Number(d['Cor ou raça é parda'] ?? 0) +
-            Number(d['Cor ou raça é branca'] ?? 0) +
-            Number(d['Cor ou raça é preta'] ?? 0) +
-            Number(d['Cor ou raça é amarela'] ?? 0) +
-            Number(d['Cor ou raça é indígena'] ?? 0),
-        } as NeighborhoodDatum;
-      })
-      .sort((a, b) => Number(b.total) - Number(a.total))
-      .slice(0, 10);
-  }
 }

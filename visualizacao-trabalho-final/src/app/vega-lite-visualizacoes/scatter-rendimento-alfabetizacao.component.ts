@@ -1,14 +1,7 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import embed, { VisualizationSpec } from 'vega-embed';
-
-type ScatterDatum = {
-  bairro: string;
-  rendimento: number;
-  populacao: number;
-  alfabetizados: number;
-  taxaAlfabetizacao: number;
-  destaque: boolean;
-};
+import { ScatterDatum } from './models/chart-data.models';
+import { buildLiteracyScatterData } from './models/chart-data.utils';
 
 @Component({
   selector: 'app-scatter-rendimento-alfabetizacao',
@@ -27,7 +20,7 @@ export class ScatterRendimentoAlfabetizacaoComponent implements AfterViewInit {
     const data = (await response.json()) as Array<Record<string, unknown>>;
 
     const chaveRenda = 'Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados';
-    const dadosScatter = this.prepareData(data, chaveRenda);
+    const dadosScatter = buildLiteracyScatterData(data, chaveRenda);
 
     const points = {
       data: { values: dadosScatter },
@@ -97,76 +90,4 @@ export class ScatterRendimentoAlfabetizacaoComponent implements AfterViewInit {
     await embed(this.chartContainer.nativeElement, spec);
   }
 
-  private prepareData(data: Array<Record<string, unknown>>, chaveRenda: string): ScatterDatum[] {
-    const dadosBase = data.map((d) => {
-      const populacao = this.sumValues(d, [
-        '0 a 4 anos',
-        '5 a 9 anos',
-        '10 a 14 anos',
-        '15 a 19 anos',
-        '20 a 24 anos',
-        '25 a 29 anos',
-        '30 a 39 anos',
-        '40 a 49 anos',
-        '50 a 59 anos',
-        '60 a 69 anos',
-        '70 anos ou mais',
-      ]);
-
-      const alfabetizados = this.sumValues(d, [
-        'Pessoas alfabetizadas, 15 a 19 anos',
-        'Pessoas alfabetizadas, 20 a 24 anos',
-        'Pessoas alfabetizadas, 25 a 29 anos',
-        'Pessoas alfabetizadas, 30 a 34 anos',
-        'Pessoas alfabetizadas, 35 a 39 anos',
-        'Pessoas alfabetizadas, 40 a 44 anos',
-        'Pessoas alfabetizadas, 45 a 49 anos',
-        'Pessoas alfabetizadas, 50 a 54 anos',
-        'Pessoas alfabetizadas, 55 a 59 anos',
-        'Pessoas alfabetizadas, 60 a 64 anos',
-        'Pessoas alfabetizadas, 65 a 69 anos',
-        'Pessoas alfabetizadas, 70 a 79 anos',
-        'Pessoas alfabetizadas, 80 anos ou mais',
-      ]);
-
-      const rendimento = this.parseNumber(d[chaveRenda]);
-      const taxaAlfabetizacao = populacao > 0 ? (alfabetizados / populacao) * 100 : 0;
-
-      return {
-        bairro: typeof d['NM_BAIRRO'] === 'string' ? d['NM_BAIRRO'] : '',
-        rendimento,
-        populacao,
-        alfabetizados,
-        taxaAlfabetizacao,
-        destaque: false,
-      } satisfies ScatterDatum;
-    });
-
-    const topN = new Set(
-      [...dadosBase]
-        .sort((a, b) => b.rendimento - a.rendimento)
-        .slice(0, 10)
-        .map((d) => d.bairro)
-    );
-
-    return dadosBase.map((d) => ({ ...d, destaque: topN.has(d.bairro) }));
-  }
-
-  private sumValues(d: Record<string, unknown>, keys: string[]): number {
-    return keys.reduce((acc, key) => acc + this.parseNumber(d[key]), 0);
-  }
-
-  private parseNumber(value: unknown): number {
-    if (typeof value === 'number') {
-      return Number.isFinite(value) ? value : 0;
-    }
-
-    if (typeof value === 'string') {
-      const normalized = value.replace(/\./g, '').replace(',', '.').trim();
-      const parsed = Number.parseFloat(normalized);
-      return Number.isFinite(parsed) ? parsed : 0;
-    }
-
-    return 0;
-  }
 }

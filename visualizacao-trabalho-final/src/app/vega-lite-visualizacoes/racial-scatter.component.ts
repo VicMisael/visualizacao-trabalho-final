@@ -1,14 +1,7 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import embed, { VisualizationSpec } from 'vega-embed';
-
-type RacialScatterDatum = {
-  bairro: string;
-  rendimento: number;
-  populacao: number;
-  racializados: number;
-  proporcaoNegra: number;
-  destaque: boolean;
-};
+import { RacialScatterDatum } from './models/chart-data.models';
+import { buildRacialScatterData } from './models/chart-data.utils';
 
 @Component({
   selector: 'app-racial-scatter',
@@ -26,7 +19,7 @@ export class RacialScatterComponent implements AfterViewInit {
     const response = await fetch('/data/Base_Fortaleza_Consolidada.json');
     const data = (await response.json()) as Array<Record<string, unknown>>;
 
-    const dadosScatter = this.prepareData(data);
+    const dadosScatter = buildRacialScatterData(data);
 
     const points = {
       data: { values: dadosScatter },
@@ -95,70 +88,4 @@ export class RacialScatterComponent implements AfterViewInit {
     await embed(this.chartContainer.nativeElement, spec);
   }
 
-  private prepareData(data: Array<Record<string, unknown>>): RacialScatterDatum[] {
-    const dadosScatter = data.map((d) => {
-      const rendimento = this.parseNumber(
-        d['Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados']
-      );
-
-      const populacao = this.sumValues(d, [
-        '0 a 4 anos',
-        '5 a 9 anos',
-        '10 a 14 anos',
-        '15 a 19 anos',
-        '20 a 24 anos',
-        '25 a 29 anos',
-        '30 a 39 anos',
-        '40 a 49 anos',
-        '50 a 59 anos',
-        '60 a 69 anos',
-        '70 anos ou mais',
-      ]);
-
-      const racializados = this.sumValues(d, [
-        'Cor ou raça é preta',
-        'Cor ou raça é parda',
-        'Cor ou raça é indígena',
-        'Cor ou raça é amarela',
-      ]);
-
-      const proporcaoNegra = populacao > 0 ? (racializados / populacao) * 100 : 0;
-
-      return {
-        bairro: typeof d['NM_BAIRRO'] === 'string' ? d['NM_BAIRRO'] : '',
-        rendimento,
-        populacao,
-        racializados,
-        proporcaoNegra,
-        destaque: false,
-      } satisfies RacialScatterDatum;
-    });
-
-    const topN = new Set(
-      [...dadosScatter]
-        .sort((a, b) => b.rendimento - a.rendimento)
-        .slice(0, 10)
-        .map((d) => d.bairro)
-    );
-
-    return dadosScatter.map((d) => ({ ...d, destaque: topN.has(d.bairro) }));
-  }
-
-  private sumValues(d: Record<string, unknown>, keys: string[]): number {
-    return keys.reduce((acc, key) => acc + this.parseNumber(d[key]), 0);
-  }
-
-  private parseNumber(value: unknown): number {
-    if (typeof value === 'number') {
-      return Number.isFinite(value) ? value : 0;
-    }
-
-    if (typeof value === 'string') {
-      const normalized = value.replace(/\./g, '').replace(',', '.').trim();
-      const parsed = Number.parseFloat(normalized);
-      return Number.isFinite(parsed) ? parsed : 0;
-    }
-
-    return 0;
-  }
 }

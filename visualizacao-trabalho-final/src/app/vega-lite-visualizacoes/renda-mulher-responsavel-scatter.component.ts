@@ -1,15 +1,7 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import embed, { VisualizationSpec } from 'vega-embed';
-
-type MulherResponsavelScatterDatum = {
-  bairro: string;
-  rendimento: number;
-  responsaveisHomens: number;
-  responsaveisMulheres: number;
-  totalResponsaveis: number;
-  proporcaoMulheresResponsaveis: number;
-  destaque: boolean;
-};
+import { MulherResponsavelScatterDatum } from './models/chart-data.models';
+import { buildWomenResponsibleScatterData } from './models/chart-data.utils';
 
 @Component({
   selector: 'app-renda-mulher-responsavel-scatter',
@@ -27,7 +19,7 @@ export class RendaMulherResponsavelScatterComponent implements AfterViewInit {
     const response = await fetch('/data/Base_Fortaleza_Consolidada.json');
     const data = (await response.json()) as Array<Record<string, unknown>>;
 
-    const dadosScatter = this.prepareData(data);
+    const dadosScatter = buildWomenResponsibleScatterData(data);
 
     const points = {
       data: { values: dadosScatter },
@@ -96,61 +88,4 @@ export class RendaMulherResponsavelScatterComponent implements AfterViewInit {
     await embed(this.chartContainer.nativeElement, spec);
   }
 
-  private prepareData(data: Array<Record<string, unknown>>): MulherResponsavelScatterDatum[] {
-    const dadosScatter = data.map((d) => {
-      const rendimento = this.parseNumber(
-        d['Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados']
-      );
-
-      const responsaveisHomens = this.sumValues(d, [
-        'Pessoa responsável pelo domicílio, Sexo masculino, 15 anos ou mais, Morador sabe ler e escrever',
-        'Pessoa responsável pelo domicílio, Sexo masculino, 15 anos ou mais, Morador não sabe ler e escrever',
-      ]);
-
-      const responsaveisMulheres = this.sumValues(d, [
-        'Pessoa responsável pelo domicílio, Sexo feminino, 15 anos ou mais, Morador sabe ler e escrever',
-        'Pessoa responsável pelo domicílio, Sexo feminino, 15 anos ou mais, Morador não sabe ler e escrever',
-      ]);
-
-      const totalResponsaveis = responsaveisHomens + responsaveisMulheres;
-      const proporcaoMulheresResponsaveis = totalResponsaveis > 0 ? (responsaveisMulheres / totalResponsaveis) * 100 : 0;
-
-      return {
-        bairro: typeof d['NM_BAIRRO'] === 'string' ? d['NM_BAIRRO'] : '',
-        rendimento,
-        responsaveisHomens,
-        responsaveisMulheres,
-        totalResponsaveis,
-        proporcaoMulheresResponsaveis,
-        destaque: false,
-      } satisfies MulherResponsavelScatterDatum;
-    });
-
-    const topN = new Set(
-      [...dadosScatter]
-        .sort((a, b) => b.rendimento - a.rendimento)
-        .slice(0, 10)
-        .map((d) => d.bairro)
-    );
-
-    return dadosScatter.map((d) => ({ ...d, destaque: topN.has(d.bairro) }));
-  }
-
-  private sumValues(d: Record<string, unknown>, keys: string[]): number {
-    return keys.reduce((acc, key) => acc + this.parseNumber(d[key]), 0);
-  }
-
-  private parseNumber(value: unknown): number {
-    if (typeof value === 'number') {
-      return Number.isFinite(value) ? value : 0;
-    }
-
-    if (typeof value === 'string') {
-      const normalized = value.replace(/\./g, '').replace(',', '.').trim();
-      const parsed = Number.parseFloat(normalized);
-      return Number.isFinite(parsed) ? parsed : 0;
-    }
-
-    return 0;
-  }
 }
