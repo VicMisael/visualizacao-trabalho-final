@@ -1,8 +1,9 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import embed, { VisualizationSpec } from 'vega-embed';
+import { Component } from '@angular/core';
+import { VisualizationSpec } from 'vega-embed';
 import { RendaDatum } from './models/chart-data.models';
 import { buildTopIncomeNeighborhoods } from './models/chart-data.utils';
 import { parseNumericValue } from './models/chart-data.models';
+import { VegaLiteChartBase } from './shared/vega-lite-chart-base';
 
 type StackedDatum = {
   bairro: string;
@@ -16,17 +17,8 @@ type StackedDatum = {
   standalone: true,
   template: `<div #chart></div>`,
 })
-export class IdadeSexoBairrosChartComponent implements AfterViewInit {
-  @ViewChild('chart', { static: true }) chartContainer!: ElementRef<HTMLDivElement>;
-
-  ngAfterViewInit(): void {
-    void this.renderChart();
-  }
-
-  private async renderChart(): Promise<void> {
-    const response = await fetch('/data/Base_Fortaleza_Consolidada.json');
-    const data = (await response.json()) as Array<Record<string, unknown>>;
-
+export class IdadeSexoBairrosChartComponent extends VegaLiteChartBase {
+  override createSpec(data: Array<Record<string, unknown>>): VisualizationSpec {
     const chaveRenda = 'Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados';
     const top10Renda = buildTopIncomeNeighborhoods(data, chaveRenda);
     const dados = this.buildStackedData(top10Renda);
@@ -68,7 +60,7 @@ export class IdadeSexoBairrosChartComponent implements AfterViewInit {
       },
     };
 
-    await embed(this.chartContainer.nativeElement, spec);
+    return spec;
   }
 
   private buildStackedData(top10Renda: RendaDatum[]): StackedDatum[] {

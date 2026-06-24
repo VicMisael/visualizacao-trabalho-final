@@ -1,24 +1,15 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import embed, { VisualizationSpec } from 'vega-embed';
-import { RendaDatum } from './models/chart-data.models';
+import { Component } from '@angular/core';
+import { VisualizationSpec } from 'vega-embed';
 import { buildTopIncomeNeighborhoods } from './models/chart-data.utils';
+import { VegaLiteChartBase } from './shared/vega-lite-chart-base';
 
 @Component({
   selector: 'app-renda-bairros-chart',
   standalone: true,
   template: `<div #chart></div>`,
 })
-export class RendaBairrosChartComponent implements AfterViewInit {
-  @ViewChild('chart', { static: true }) chartContainer!: ElementRef<HTMLDivElement>;
-
-  ngAfterViewInit(): void {
-    void this.renderChart();
-  }
-
-  private async renderChart(): Promise<void> {
-    const response = await fetch('/data/Base_Fortaleza_Consolidada.json');
-    const data = (await response.json()) as Array<Record<string, unknown>>;
-
+export class RendaBairrosChartComponent extends VegaLiteChartBase {
+  override createSpec(data: Array<Record<string, unknown>>): VisualizationSpec {
     const chaveRenda = 'Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados';
     const top10Renda = buildTopIncomeNeighborhoods(data, chaveRenda);
 
@@ -44,7 +35,6 @@ export class RendaBairrosChartComponent implements AfterViewInit {
       },
     };
 
-    await embed(this.chartContainer.nativeElement, spec);
+    return spec;
   }
-
 }

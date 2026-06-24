@@ -1,24 +1,15 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import embed, { VisualizationSpec } from 'vega-embed';
-import { RacialScatterDatum } from './models/chart-data.models';
+import { Component } from '@angular/core';
+import { VisualizationSpec } from 'vega-embed';
 import { buildRacialScatterData } from './models/chart-data.utils';
+import { VegaLiteChartBase } from './shared/vega-lite-chart-base';
 
 @Component({
   selector: 'app-racial-scatter',
   standalone: true,
   template: `<div #chart></div>`,
 })
-export class RacialScatterComponent implements AfterViewInit {
-  @ViewChild('chart', { static: true }) chartContainer!: ElementRef<HTMLDivElement>;
-
-  ngAfterViewInit(): void {
-    void this.renderChart();
-  }
-
-  private async renderChart(): Promise<void> {
-    const response = await fetch('/data/Base_Fortaleza_Consolidada.json');
-    const data = (await response.json()) as Array<Record<string, unknown>>;
-
+export class RacialScatterComponent extends VegaLiteChartBase {
+  override createSpec(data: Array<Record<string, unknown>>): VisualizationSpec {
     const dadosScatter = buildRacialScatterData(data);
 
     const points = {
@@ -85,7 +76,6 @@ export class RacialScatterComponent implements AfterViewInit {
       layer: [points, regression],
     };
 
-    await embed(this.chartContainer.nativeElement, spec);
+    return spec;
   }
-
 }

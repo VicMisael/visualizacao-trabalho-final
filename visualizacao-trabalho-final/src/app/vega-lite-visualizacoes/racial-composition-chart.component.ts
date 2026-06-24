@@ -1,24 +1,15 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import embed, { VisualizationSpec } from 'vega-embed';
-import { NeighborhoodDatum } from './models/chart-data.models';
+import { Component } from '@angular/core';
+import { VisualizationSpec } from 'vega-embed';
 import { buildTopNeighborhoods } from './models/chart-data.utils';
+import { VegaLiteChartBase } from './shared/vega-lite-chart-base';
 
 @Component({
   selector: 'app-racial-composition-chart',
   standalone: true,
   template: `<div #chart></div>`,
 })
-export class RacialCompositionChartComponent implements AfterViewInit {
-  @ViewChild('chart', { static: true }) chartContainer!: ElementRef<HTMLDivElement>;
-
-  ngAfterViewInit(): void {
-    void this.renderChart();
-  }
-
-  private async renderChart(): Promise<void> {
-    const response = await fetch('/data/Base_Fortaleza_Consolidada.json');
-    const data = (await response.json()) as Array<Record<string, unknown>>;
-
+export class RacialCompositionChartComponent extends VegaLiteChartBase {
+  override createSpec(data: Array<Record<string, unknown>>): VisualizationSpec {
     const top10Bairros = buildTopNeighborhoods(data, [
       'Cor ou raça é parda',
       'Cor ou raça é branca',
@@ -67,7 +58,6 @@ export class RacialCompositionChartComponent implements AfterViewInit {
       },
     };
 
-    await embed(this.chartContainer.nativeElement, spec);
+    return spec;
   }
-
 }

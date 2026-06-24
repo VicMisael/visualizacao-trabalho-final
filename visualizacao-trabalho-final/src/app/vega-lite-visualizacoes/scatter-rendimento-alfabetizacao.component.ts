@@ -1,24 +1,15 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import embed, { VisualizationSpec } from 'vega-embed';
-import { ScatterDatum } from './models/chart-data.models';
+import { Component } from '@angular/core';
+import { VisualizationSpec } from 'vega-embed';
 import { buildLiteracyScatterData } from './models/chart-data.utils';
+import { VegaLiteChartBase } from './shared/vega-lite-chart-base';
 
 @Component({
   selector: 'app-scatter-rendimento-alfabetizacao',
   standalone: true,
   template: `<div #chart></div>`,
 })
-export class ScatterRendimentoAlfabetizacaoComponent implements AfterViewInit {
-  @ViewChild('chart', { static: true }) chartContainer!: ElementRef<HTMLDivElement>;
-
-  ngAfterViewInit(): void {
-    void this.renderChart();
-  }
-
-  private async renderChart(): Promise<void> {
-    const response = await fetch('/data/Base_Fortaleza_Consolidada.json');
-    const data = (await response.json()) as Array<Record<string, unknown>>;
-
+export class ScatterRendimentoAlfabetizacaoComponent extends VegaLiteChartBase {
+  override createSpec(data: Array<Record<string, unknown>>): VisualizationSpec {
     const chaveRenda = 'Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados';
     const dadosScatter = buildLiteracyScatterData(data, chaveRenda);
 
@@ -87,7 +78,6 @@ export class ScatterRendimentoAlfabetizacaoComponent implements AfterViewInit {
       layer: [points, regressionLine],
     };
 
-    await embed(this.chartContainer.nativeElement, spec);
+    return spec;
   }
-
 }
