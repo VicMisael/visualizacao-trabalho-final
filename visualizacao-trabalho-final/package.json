@@ -23,7 +23,10 @@
     "postcss": "^8.5.15",
     "rxjs": "~7.8.0",
     "tailwindcss": "^4.3.0",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "vega": "^6.2.0",
+    "vega-embed": "^7.1.0",
+    "vega-lite": "^6.4.3"
   },
   "devDependencies": {
     "@angular/build": "^21.2.12",
