@@ -4,6 +4,20 @@
   height: 100%;
 }
 
+.map-shell {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.map-controls {
+  position: absolute;
+  z-index: 1;
+  top: 1rem;
+  left: 1rem;
+  max-width: calc(100% - 2rem);
+}
+
 .map-container {
   width: 100%;
   height: 100%;

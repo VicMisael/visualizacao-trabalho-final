@@ -9,4 +9,10 @@ import { FortalMap } from './map/map';
 })
 export class App {
   protected readonly title = signal('visualizacao-trabalho-final');
+
+  mapElementClickListener(obj:Object){
+
+    console.log(obj)
+    
+  }
 }

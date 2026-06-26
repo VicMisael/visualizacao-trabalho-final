@@ -1,1 +1,7 @@
-<div class="map-container" #mapContainer></div>
+<div class="map-shell">
+  <div class="map-controls">
+    <app-controls [(drillLevel)]="currentDrillDownLevel"></app-controls>
+  </div>
+
+  <div class="map-container" #mapContainer></div>
+</div>
