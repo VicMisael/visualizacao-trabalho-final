@@ -1,4 +1,4 @@
-import { afterNextRender, Component, ElementRef, inject, model, output, viewChild } from '@angular/core';
+import { afterNextRender, Component, DestroyRef, ElementRef, inject, model, output, viewChild } from '@angular/core';
 import * as d3 from 'd3';
 import { GeoDataService } from '../../core/services/geo-data';
 import { DrillLevel } from '../../core/models/drill-level';
@@ -20,6 +20,7 @@ export class FortalMap {
 
   private readonly mapContainer = viewChild.required<ElementRef<HTMLDivElement>>('mapContainer');
   private readonly geoData = inject(GeoDataService);
+  private readonly destroyRef = inject(DestroyRef);
 
   private svg?: d3.Selection<SVGSVGElement, unknown, null, undefined>;
   private zoom?: d3.ZoomBehavior<SVGSVGElement, unknown>;
@@ -30,11 +31,19 @@ export class FortalMap {
   private path?: d3.GeoPath;
   private width = 0;
   private height = 0;
+  private pendingDetailTransform: d3.ZoomTransform | null = null;
+  private detailFrameId: number | null = null;
 
 
   constructor() {
     afterNextRender(() => {
       void this.initializeMap();
+    });
+
+    this.destroyRef.onDestroy(() => {
+      if (this.detailFrameId !== null) {
+        cancelAnimationFrame(this.detailFrameId);
+      }
     });
   }
 
@@ -145,7 +154,9 @@ export class FortalMap {
       .attr('fill', '#d8efe6')
       .attr('stroke', '#38514a')
       .attr('stroke-width', 0.6)
-      .on('click', this.handleFeatureClick);
+      .on('click', (event, feature) => {
+        this.handleFeatureClick(event, feature);
+      });
 
   }
 
@@ -180,7 +191,40 @@ export class FortalMap {
     }
 
     this.currentDrillDownLevel.set(d)
-    this.drawDetail()
+    this.scheduleRenderVisibleDetail(event.transform);
+  }
+
+  private scheduleRenderVisibleDetail(transform: d3.ZoomTransform): void {
+    this.pendingDetailTransform = transform;
+
+    if (this.detailFrameId !== null) {
+      return;
+    }
+
+    this.detailFrameId = requestAnimationFrame(() => {
+      this.detailFrameId = null;
+
+      if (!this.pendingDetailTransform) {
+        return;
+      }
+
+      const nextTransform = this.pendingDetailTransform;
+      this.pendingDetailTransform = null;
+
+      this.renderVisibleDetail(nextTransform);
+    });
+  }
+
+  private renderVisibleDetail(transform: d3.ZoomTransform): void {
+    if (this.currentDrillDownLevel() === DrillLevel.DISTRITOS) {
+      this.clearDetailLayer();
+      return;
+    }
+
+    const geojson = this.geoData.getLayer(this.currentDrillDownLevel()) as FortalezaFeatureCollection;
+    const visibleFeatures = this.getVisibleFeatures(geojson.features, transform);
+
+    this.renderDetail(visibleFeatures);
   }
 
   private getVisibleFeatures(
