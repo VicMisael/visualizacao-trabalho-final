@@ -36,13 +36,21 @@ export class RacialCompositionChartComponent extends VegaLiteChartBase {
         x: {
           field: 'Valor',
           type: 'quantitative',
-          title: 'Valor',
+          title: 'Composição (%)',
+          stack: 'normalize',
+          axis: {
+            format: '.0%'
+          }
         },
         y: {
           field: 'NM_BAIRRO',
           type: 'nominal',
           title: 'Bairro',
-          sort: '-x',
+          sort: {
+            field: chaveRenda,
+            op: 'max',
+            order: 'descending'
+          }
         },
         color: {
           field: 'Cor',
