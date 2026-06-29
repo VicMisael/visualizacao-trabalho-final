@@ -15,7 +15,7 @@ export class RacialCompositionChartComponent extends VegaLiteChartBase {
 
     const spec: VisualizationSpec = {
       $schema: 'https://vega.github.io/schema/vega-lite/v6.json',
-      title: 'Composição racial dos 10 bairros com maior rendimento',
+      title: 'Composição racial (%) dos 10 bairros com maior rendimento nominal médio',
       width: 800,
       height: 350,
       data: { values: top10Renda },
