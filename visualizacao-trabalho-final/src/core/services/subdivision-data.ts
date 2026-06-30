@@ -9,7 +9,7 @@ import {
 @Injectable({
   providedIn: 'root',
 })
-export class SubdivisionData {
+export class SubdivisionDataService {
   private readonly cache = new Map<string, Promise<unknown>>();
 
   async getSubdistritosAsync(cdSubdistritos: string[] = []): Promise<SubdistrictRow[]> {

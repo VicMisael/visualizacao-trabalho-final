@@ -4,6 +4,7 @@ import { GeoDataService } from '../../core/services/geo-data';
 import { DrillLevel } from '../../core/models/drill-level';
 import { Controls } from './controls/controls';
 import { FortalezaFeatureCollection, FortalezaMapFeature } from './map.types';
+import { SubdivisionDataService } from '../../core/services/subdivision-data';
 
 
 @Component({
@@ -20,6 +21,7 @@ export class FortalMap {
 
   private readonly mapContainer = viewChild.required<ElementRef<HTMLDivElement>>('mapContainer');
   private readonly geoData = inject(GeoDataService);
+  private readonly subdivisionData = inject(SubdivisionDataService)
 
   private svg?: d3.Selection<SVGSVGElement, unknown, null, undefined>;
   private zoom?: d3.ZoomBehavior<SVGSVGElement, unknown>;
