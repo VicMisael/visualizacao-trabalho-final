@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import {
   CensusSectorRow,
-  ConsolidatedNeighborhoodRow,
   DistrictRow,
+  NeighborhoodRow,
   SubdistrictRow,
 } from '../models/public-data.models';
 
@@ -10,27 +10,26 @@ import {
   providedIn: 'root',
 })
 export class SubdivisionDataService {
+  private readonly dataPath = '/data/simplificado';
   private readonly cache = new Map<string, Promise<unknown>>();
 
   async getSubdistritosAsync(cdSubdistritos: string[] = []): Promise<SubdistrictRow[]> {
     const data = await this.fetchJson<SubdistrictRow[]>(
-      '/data/Base_fortaleza_subdistritos.json',
+      `${this.dataPath}/Base_fortaleza_subdistritos_simplificado.json`,
     );
 
     return this.filterByCodes(data, 'CD_SUBDIST', cdSubdistritos);
   }
 
-  async getFortalezaDistrictAsync(cdDistritos: string[] = []): Promise<DistrictRow[]> {
-    const data = await this.fetchJson<DistrictRow[]>(
-      '/data/Base_fortaleza_Renda_Cor_Raca_distritos.json',
+  async getFortalezaDistrictAsync(): Promise<DistrictRow[]> {
+    return this.fetchJson<DistrictRow[]>(
+      `${this.dataPath}/Base_fortaleza_distritos_simplificado.json`,
     );
-
-    return this.filterByCodes(data, 'CD_DIST', cdDistritos);
   }
 
-  async getBairrosAsync(cdBairros: string[] = []): Promise<ConsolidatedNeighborhoodRow[]> {
-    const data = await this.fetchJson<ConsolidatedNeighborhoodRow[]>(
-      '/data/bairros/Base_Fortaleza_Consolidada.json',
+  async getBairrosAsync(cdBairros: string[] = []): Promise<NeighborhoodRow[]> {
+    const data = await this.fetchJson<NeighborhoodRow[]>(
+      `${this.dataPath}/Base_fortaleza_bairros_simplificado.json`,
     );
 
     return this.filterByCodes(data, 'CD_BAIRRO', cdBairros);
@@ -38,7 +37,7 @@ export class SubdivisionDataService {
 
   async getSectors(cdSetores: string[] = []): Promise<CensusSectorRow[]> {
     const data = await this.fetchJson<CensusSectorRow[]>(
-      '/data/Base_fortaleza_Renda_Cor_Raca_setores.json',
+      `${this.dataPath}/Base_fortaleza_setores_simplificada.json`,
     );
 
     return this.filterByCodes(data, 'CD_SETOR', cdSetores);

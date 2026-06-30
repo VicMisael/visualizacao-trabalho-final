@@ -1,4 +1,4 @@
-export interface IMapData {
+export class IMapData {
   id?: number;
 
   CD_REGIAO?: string;
@@ -40,6 +40,10 @@ export interface IMapData {
   v0006?: string | number | null;
   v0007?: string | number | null;
 
+  get totalPessoas():string | number | null | undefined{
+    return this.v0001;
+  }
+  
   [key: string]: string | number | null | undefined;
 }
 
