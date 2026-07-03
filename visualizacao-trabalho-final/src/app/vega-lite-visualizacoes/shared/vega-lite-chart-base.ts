@@ -10,7 +10,7 @@ export abstract class VegaLiteChartBase implements AfterViewInit {
   }
 
   protected async loadData(): Promise<Array<Record<string, unknown>>> {
-    const response = await fetch('/data/Base_Fortaleza_Consolidada.json');
+    const response = await fetch('/data/bairros/Base_Fortaleza_Consolidada.json');
     return (await response.json()) as Array<Record<string, unknown>>;
   }
 

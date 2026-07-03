@@ -4,7 +4,15 @@ import { GeoDataService } from '../../core/services/geo-data';
 import { DrillLevel } from '../../core/models/drill-level';
 import { Controls } from './controls/controls';
 import { FortalezaFeatureCollection, FortalezaMapFeature } from './map.types';
+import { SubdivisionDataService } from '../../core/services/subdivision-data';
+import { SimplifiedCensusRow } from '../../core/models/public-data.models';
 
+type MapMetric = {
+  key: string;
+  label: string;
+  missingColor: string;
+  interpolator: (value: number) => string;
+};
 
 @Component({
   selector: 'fortal-map',
@@ -20,7 +28,20 @@ export class FortalMap {
 
   private readonly mapContainer = viewChild.required<ElementRef<HTMLDivElement>>('mapContainer');
   private readonly geoData = inject(GeoDataService);
+  private readonly subdivisionData = inject(SubdivisionDataService);
   private readonly destroyRef = inject(DestroyRef);
+
+  private readonly metrics = {
+    averageIncome: {
+      key: 'Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados',
+      label: 'Renda média',
+      missingColor: '#eef2ef',
+      interpolator: d3.interpolateYlGnBu,
+    },
+  } satisfies Record<string, MapMetric>;
+
+  private readonly selectedMetric = this.metrics.averageIncome;
+  private readonly dataByLevel = new Map<DrillLevel, Promise<Map<string, SimplifiedCensusRow>>>();
 
   private svg?: d3.Selection<SVGSVGElement, unknown, null, undefined>;
   private zoom?: d3.ZoomBehavior<SVGSVGElement, unknown>;
@@ -31,8 +52,8 @@ export class FortalMap {
   private path?: d3.GeoPath;
   private width = 0;
   private height = 0;
-  private pendingDetailTransform: d3.ZoomTransform | null = null;
   private detailFrameId: number | null = null;
+  private detailRenderVersion = 0;
 
 
   constructor() {
@@ -59,11 +80,22 @@ export class FortalMap {
   }
 
   private async drawDetail() {
-    if (this.currentDrillDownLevel() != DrillLevel.DISTRITOS) {
-      const geojson = (await this.geoData.loadLayer(this.currentDrillDownLevel())) as FortalezaFeatureCollection;
+    const renderVersion = ++this.detailRenderVersion;
+    const drillLevel = this.currentDrillDownLevel();
+
+    if (drillLevel != DrillLevel.DISTRITOS) {
+      const geojson = (await this.geoData.loadLayer(drillLevel)) as FortalezaFeatureCollection;
+
+      if (renderVersion !== this.detailRenderVersion) {
+        return;
+      }
 
       const transform = d3.zoomTransform(this.svg?.node()!);
-      this.renderDetail(this.getVisibleFeatures(geojson.features, transform));
+      await this.renderDetail(
+        this.getVisibleFeatures(geojson.features, transform),
+        drillLevel,
+        renderVersion,
+      );
       return;
     }
 
@@ -72,6 +104,7 @@ export class FortalMap {
 
   private async renderMap() {
     const geojson = (await this.geoData.loadLayer(DrillLevel.DISTRITOS)) as FortalezaFeatureCollection;
+    const fillColor = await this.getFillColor(DrillLevel.DISTRITOS);
     const container = this.mapContainer().nativeElement;
 
     this.width = container.clientWidth || 900;
@@ -104,7 +137,7 @@ export class FortalMap {
       .data(geojson.features)
       .join('path')
       .attr('d', path)
-      .attr('fill', '#d8efe6')
+      .attr('fill', fillColor)
       .attr('stroke', '#38514a')
       .attr('stroke-width', 0.6);
   }
@@ -139,24 +172,30 @@ export class FortalMap {
 
 
 
-  private renderDetail(features: FortalezaMapFeature[]) {
+  private async renderDetail(
+    features: FortalezaMapFeature[],
+    drillLevel: DrillLevel,
+    renderVersion: number,
+  ) {
     if (this.detailLayer == null || this.path == null) {
       return;
     }
 
-    // console.log("[Render DEtail]", features)
+    const fillColor = await this.getFillColor(drillLevel);
+
+    if (renderVersion !== this.detailRenderVersion) {
+      return;
+    }
 
     this.detailLayer
       .selectAll('path')
-      .data(features)
+      .data(features, (feature) => this.getFeatureKey(feature as FortalezaMapFeature, drillLevel))
       .join('path')
       .attr('d', this.path)
-      .attr('fill', '#d8efe6')
+      .attr('fill', fillColor)
       .attr('stroke', '#38514a')
       .attr('stroke-width', 0.6)
-      .on('click', (event, feature) => {
-        this.handleFeatureClick(event, feature);
-      });
+      .on('click', (event, feature) => this.handleFeatureClick(event, feature));
 
   }
 
@@ -168,6 +207,129 @@ export class FortalMap {
 
   private clearDetailLayer(): void {
     this.detailLayer?.selectAll('*').remove();
+  }
+
+  private async getFillColor(
+    drillLevel: DrillLevel,
+  ): Promise<(feature: FortalezaMapFeature) => string> {
+    const metric = this.selectedMetric;
+    const rowsByCode = await this.getDataByLevel(drillLevel);
+    const values = [...rowsByCode.values()]
+      .map((row) => this.getNumericMetricValue(row, metric.key))
+      .filter((value): value is number => value != null);
+    const domain = d3.extent(values);
+
+    if (domain[0] == null || domain[1] == null) {
+      return () => metric.missingColor;
+    }
+
+    const scale = domain[0] === domain[1]
+      ? () => metric.interpolator(0.65)
+      : d3.scaleSequential(domain as [number, number], metric.interpolator);
+
+    return (feature) => {
+      const row = this.getFeatureData(feature, drillLevel, rowsByCode);
+      const value = row ? this.getNumericMetricValue(row, metric.key) : null;
+
+      return value == null ? metric.missingColor : scale(value);
+    };
+  }
+
+  private getFeatureData(
+    feature: FortalezaMapFeature,
+    drillLevel: DrillLevel,
+    rowsByCode: Map<string, SimplifiedCensusRow>,
+  ): SimplifiedCensusRow | undefined {
+    if (drillLevel === DrillLevel.DISTRITOS) {
+      return rowsByCode.get(DrillLevel.DISTRITOS);
+    }
+
+    const codeField = this.getCodeField(drillLevel);
+    const code = codeField ? feature.properties?.[codeField] : null;
+
+    return code == null ? undefined : rowsByCode.get(String(code).trim());
+  }
+
+  private getNumericMetricValue(row: SimplifiedCensusRow, key: string): number | null {
+    const value = row[key];
+
+    if (typeof value === 'number') {
+      return Number.isFinite(value) ? value : null;
+    }
+
+    if (typeof value === 'string') {
+      const numericValue = Number(value.replace(',', '.'));
+
+      return Number.isFinite(numericValue) ? numericValue : null;
+    }
+
+    return null;
+  }
+
+  private getDataByLevel(drillLevel: DrillLevel): Promise<Map<string, SimplifiedCensusRow>> {
+    const cached = this.dataByLevel.get(drillLevel);
+
+    if (cached) {
+      return cached;
+    }
+
+    const request = this.loadDataByLevel(drillLevel);
+    this.dataByLevel.set(drillLevel, request);
+
+    return request;
+  }
+
+  private async loadDataByLevel(drillLevel: DrillLevel): Promise<Map<string, SimplifiedCensusRow>> {
+    switch (drillLevel) {
+      case DrillLevel.DISTRITOS: {
+        const [district] = await this.subdivisionData.getFortalezaDistrictAsync();
+
+        return new Map([[DrillLevel.DISTRITOS, district]]);
+      }
+      case DrillLevel.SUBDISTRITOS: {
+        const rows = await this.subdivisionData.getSubdistritosAsync();
+
+        return this.mapRowsByCode(rows, 'CD_SUBDIST');
+      }
+      case DrillLevel.BAIRRO: {
+        const rows = await this.subdivisionData.getBairrosAsync();
+
+        return this.mapRowsByCode(rows, 'CD_BAIRRO');
+      }
+      case DrillLevel.SETORES: {
+        const rows = await this.subdivisionData.getSectors();
+
+        return this.mapRowsByCode(rows, 'CD_SETOR');
+      }
+    }
+  }
+
+  private mapRowsByCode<T extends SimplifiedCensusRow>(
+    rows: T[],
+    codeField: keyof T,
+  ): Map<string, SimplifiedCensusRow> {
+    return new Map(
+      rows.map((row) => [String(row[codeField]).trim(), row]),
+    );
+  }
+
+  private getCodeField(drillLevel: DrillLevel): keyof FortalezaMapFeature['properties'] | null {
+    switch (drillLevel) {
+      case DrillLevel.SUBDISTRITOS:
+        return 'CD_SUBDIST';
+      case DrillLevel.BAIRRO:
+        return 'CD_BAIRRO';
+      case DrillLevel.SETORES:
+        return 'CD_SETOR';
+      case DrillLevel.DISTRITOS:
+        return null;
+    }
+  }
+
+  private getFeatureKey(feature: FortalezaMapFeature, drillLevel: DrillLevel): string {
+    const codeField = this.getCodeField(drillLevel);
+
+    return String(codeField ? feature.properties?.[codeField] : feature.properties?.id);
   }
 
 
@@ -190,41 +352,24 @@ export class FortalMap {
       d = DrillLevel.SUBDISTRITOS;
     }
 
-    this.currentDrillDownLevel.set(d)
-    this.scheduleRenderVisibleDetail(event.transform);
+    if (this.currentDrillDownLevel() === d) {
+      this.scheduleDrawDetail();
+      return;
+    }
+
+    this.currentDrillDownLevel.set(d);
+    this.scheduleDrawDetail();
   }
 
-  private scheduleRenderVisibleDetail(transform: d3.ZoomTransform): void {
-    this.pendingDetailTransform = transform;
-
+  private scheduleDrawDetail(): void {
     if (this.detailFrameId !== null) {
       return;
     }
 
-    this.detailFrameId = requestAnimationFrame(() => {
+    this.detailFrameId = window.requestAnimationFrame(() => {
       this.detailFrameId = null;
-
-      if (!this.pendingDetailTransform) {
-        return;
-      }
-
-      const nextTransform = this.pendingDetailTransform;
-      this.pendingDetailTransform = null;
-
-      this.renderVisibleDetail(nextTransform);
+      void this.drawDetail();
     });
-  }
-
-  private renderVisibleDetail(transform: d3.ZoomTransform): void {
-    if (this.currentDrillDownLevel() === DrillLevel.DISTRITOS) {
-      this.clearDetailLayer();
-      return;
-    }
-
-    const geojson = this.geoData.getLayer(this.currentDrillDownLevel()) as FortalezaFeatureCollection;
-    const visibleFeatures = this.getVisibleFeatures(geojson.features, transform);
-
-    this.renderDetail(visibleFeatures);
   }
 
   private getVisibleFeatures(
@@ -299,5 +444,3 @@ export class FortalMap {
 
   }
 }
-
-
