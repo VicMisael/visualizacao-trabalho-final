@@ -1,4 +1,4 @@
-import { afterNextRender, Component, ElementRef, inject, model, output, viewChild } from '@angular/core';
+import { afterNextRender, Component, DestroyRef, ElementRef, inject, model, output, viewChild } from '@angular/core';
 import * as d3 from 'd3';
 import { GeoDataService } from '../../core/services/geo-data';
 import { DrillLevel } from '../../core/models/drill-level';
@@ -28,7 +28,8 @@ export class FortalMap {
 
   private readonly mapContainer = viewChild.required<ElementRef<HTMLDivElement>>('mapContainer');
   private readonly geoData = inject(GeoDataService);
-  private readonly subdivisionData = inject(SubdivisionDataService)
+  private readonly subdivisionData = inject(SubdivisionDataService);
+  private readonly destroyRef = inject(DestroyRef);
 
   private readonly metrics = {
     averageIncome: {
@@ -51,13 +52,19 @@ export class FortalMap {
   private path?: d3.GeoPath;
   private width = 0;
   private height = 0;
-  private detailRenderFrame?: number;
+  private detailFrameId: number | null = null;
   private detailRenderVersion = 0;
 
 
   constructor() {
     afterNextRender(() => {
       void this.initializeMap();
+    });
+
+    this.destroyRef.onDestroy(() => {
+      if (this.detailFrameId !== null) {
+        cancelAnimationFrame(this.detailFrameId);
+      }
     });
   }
 
@@ -350,17 +357,17 @@ export class FortalMap {
       return;
     }
 
-    this.currentDrillDownLevel.set(d)
+    this.currentDrillDownLevel.set(d);
     this.scheduleDrawDetail();
   }
 
   private scheduleDrawDetail(): void {
-    if (this.detailRenderFrame != null) {
+    if (this.detailFrameId !== null) {
       return;
     }
 
-    this.detailRenderFrame = window.requestAnimationFrame(() => {
-      this.detailRenderFrame = undefined;
+    this.detailFrameId = window.requestAnimationFrame(() => {
+      this.detailFrameId = null;
       void this.drawDetail();
     });
   }
@@ -437,5 +444,3 @@ export class FortalMap {
 
   }
 }
-
-

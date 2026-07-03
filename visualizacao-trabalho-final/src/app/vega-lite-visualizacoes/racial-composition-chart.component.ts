@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { VisualizationSpec } from 'vega-embed';
-import { buildTopNeighborhoods } from './models/chart-data.utils';
+import { buildTopIncomeNeighborhoods, buildTopNeighborhoods } from './models/chart-data.utils';
 import { VegaLiteChartBase } from './shared/vega-lite-chart-base';
 
 @Component({
@@ -10,20 +10,15 @@ import { VegaLiteChartBase } from './shared/vega-lite-chart-base';
 })
 export class RacialCompositionChartComponent extends VegaLiteChartBase {
   override createSpec(data: Array<Record<string, unknown>>): VisualizationSpec {
-    const top10Bairros = buildTopNeighborhoods(data, [
-      'Cor ou raça é parda',
-      'Cor ou raça é branca',
-      'Cor ou raça é preta',
-      'Cor ou raça é amarela',
-      'Cor ou raça é indígena',
-    ]);
+    const chaveRenda = 'Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados';
+    const top10Renda = buildTopIncomeNeighborhoods(data, chaveRenda);
 
     const spec: VisualizationSpec = {
       $schema: 'https://vega.github.io/schema/vega-lite/v6.json',
-      title: 'Composição racial dos 10 bairros mais populosos de Fortaleza',
+      title: 'Composição racial (%) dos 10 bairros com maior rendimento nominal médio',
       width: 800,
       height: 350,
-      data: { values: top10Bairros },
+      data: { values: top10Renda },
       transform: [
         {
           fold: [
@@ -41,13 +36,21 @@ export class RacialCompositionChartComponent extends VegaLiteChartBase {
         x: {
           field: 'Valor',
           type: 'quantitative',
-          title: 'Valor',
+          title: 'Composição (%)',
+          stack: 'normalize',
+          axis: {
+            format: '.0%'
+          }
         },
         y: {
           field: 'NM_BAIRRO',
           type: 'nominal',
           title: 'Bairro',
-          sort: '-x',
+          sort: {
+            field: chaveRenda,
+            op: 'max',
+            order: 'descending'
+          }
         },
         color: {
           field: 'Cor',
