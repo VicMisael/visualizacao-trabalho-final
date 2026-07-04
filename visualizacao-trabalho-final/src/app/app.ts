@@ -6,10 +6,11 @@ import { EducationSectionComponent } from './story/education-section/education-s
 import { WomenSectionComponent } from './story/women-section/women-section.component';
 import { AgeSectionComponent } from './story/age-section/age-section.component';
 import { ConclusionSectionComponent } from './story/conclusion-section/conclusion-section.component';
+import { IntroductionSectionComponent } from './story/introduction-section/introduction-sectioncomponent';
 
 @Component({
   selector: 'app-root',
-  imports: [FortalMap, IncomeSectionComponent, RaceSectionComponent, EducationSectionComponent, AgeSectionComponent, WomenSectionComponent, ConclusionSectionComponent],
+  imports: [IntroductionSectionComponent, FortalMap, IncomeSectionComponent, RaceSectionComponent, EducationSectionComponent, AgeSectionComponent, WomenSectionComponent, ConclusionSectionComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
