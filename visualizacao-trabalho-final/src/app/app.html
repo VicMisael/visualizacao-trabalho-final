@@ -1,29 +1,37 @@
-<main class="min-h-dvh bg-slate-100 p-4">
-  <section class="mx-auto grid min-h-[calc(100dvh-2rem)] max-w-screen-2xl grid-cols-[minmax(0,1fr)_360px] gap-4">
-    <div class="overflow-hidden rounded-lg border border-slate-300 bg-white">
-      <fortal-map (elementClicked) ="mapElementClickListener($event)" ></fortal-map>
+<main>
+
+  <section class="relative h-screen overflow-hidden flex items-center justify-center">
+
+    <!-- Mapa de fundo -->
+  <app-introduction-section></app-introduction-section>
+
+  </section>
+
+  <section id="story" class="mx-auto max-w-screen-2xl grid grid-cols-[50%_50%] gap-8">
+
+    <aside class="sticky top-4 h-[calc(100vh-2rem)]">
+
+      <fortal-map (elementClicked)="mapElementClickListener($event)">
+      </fortal-map>
+
+    </aside>
+
+    <div class="min-w-0 space-y-32">
+
+      <app-income-section></app-income-section>
+
+      <app-race-section></app-race-section>
+
+      <app-education-section></app-education-section>
+
+      <app-age-section></app-age-section>
+
+      <app-women-section></app-women-section>
+
+      <app-conclusion-section></app-conclusion-section>
+
     </div>
 
-    <aside class="grid grid-rows-[96px_minmax(180px,1fr)_minmax(180px,1fr)] gap-4">
-      <section class="rounded-lg border border-slate-300 bg-white"></section>
-      <section class="rounded-lg border border-slate-300 bg-white p-3">
-        <app-renda-bairros-chart></app-renda-bairros-chart>
-      </section>
-      <section class="rounded-lg border border-slate-300 bg-white p-3">
-        <app-racial-composition-chart></app-racial-composition-chart>
-      </section>
-      <section class="rounded-lg border border-slate-300 bg-white p-3">
-        <app-idade-sexo-bairros-chart></app-idade-sexo-bairros-chart>
-      </section>
-      <section class="rounded-lg border border-slate-300 bg-white p-3">
-        <app-scatter-rendimento-alfabetizacao></app-scatter-rendimento-alfabetizacao>
-      </section>
-      <section class="rounded-lg border border-slate-300 bg-white p-3">
-        <app-racial-scatter></app-racial-scatter>
-      </section>
-      <section class="rounded-lg border border-slate-300 bg-white p-3">
-        <app-renda-mulher-responsavel-scatter></app-renda-mulher-responsavel-scatter>
-      </section>
-    </aside>
   </section>
+
 </main>

@@ -72,8 +72,12 @@ export class ScatterRendimentoAlfabetizacaoComponent extends VegaLiteChartBase {
 
     const spec: VisualizationSpec = {
       $schema: 'https://vega.github.io/schema/vega-lite/v6.json',
-      title: 'Relação entre Rendimento e Alfabetização por Bairro',
-      width: 650,
+      title: 'Correlação entre Rendimento e Alfabetização por Bairro',
+      padding: 20,
+      autosize: {
+        type: 'fit',
+        contains: 'padding',
+      },
       height: 450,
       layer: [points, regressionLine],
     };

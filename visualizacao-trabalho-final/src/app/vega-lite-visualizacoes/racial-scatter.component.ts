@@ -70,9 +70,13 @@ export class RacialScatterComponent extends VegaLiteChartBase {
 
     const spec: VisualizationSpec = {
       $schema: 'https://vega.github.io/schema/vega-lite/v6.json',
-      title: 'Correlação entre Rendimento Nominal Médio e Proporção de População Racializada nos Bairros de Fortaleza',
-      width: 650,
+      title: 'Correlação entre Renda e População Racializada',
       height: 450,
+      padding: 20,
+      autosize: {
+        type: 'fit',
+        contains: 'padding',
+      },
       layer: [points, regression],
     };
 

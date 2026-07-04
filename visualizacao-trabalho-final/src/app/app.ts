@@ -1,24 +1,25 @@
 import { Component, signal } from '@angular/core';
 import { FortalMap } from './map/map';
-import { RacialCompositionChartComponent } from './vega-lite-visualizacoes/racial-composition-chart.component';
-import { RendaBairrosChartComponent } from './vega-lite-visualizacoes/renda-bairros-chart.component';
-import { IdadeSexoBairrosChartComponent } from './vega-lite-visualizacoes/idade-sexo-bairros-chart.component';
-import { ScatterRendimentoAlfabetizacaoComponent } from './vega-lite-visualizacoes/scatter-rendimento-alfabetizacao.component';
-import { RacialScatterComponent } from './vega-lite-visualizacoes/racial-scatter.component';
-import { RendaMulherResponsavelScatterComponent } from './vega-lite-visualizacoes/renda-mulher-responsavel-scatter.component';
+import { IncomeSectionComponent } from './story/income-section/income-section.component';
+import { RaceSectionComponent } from './story/race-section/race-section.component';
+import { EducationSectionComponent } from './story/education-section/education-section.component';
+import { WomenSectionComponent } from './story/women-section/women-section.component';
+import { AgeSectionComponent } from './story/age-section/age-section.component';
+import { ConclusionSectionComponent } from './story/conclusion-section/conclusion-section.component';
+import { IntroductionSectionComponent } from './story/introduction-section/introduction-sectioncomponent';
 
 @Component({
   selector: 'app-root',
-  imports: [FortalMap, RacialCompositionChartComponent, RendaBairrosChartComponent, IdadeSexoBairrosChartComponent, ScatterRendimentoAlfabetizacaoComponent, RacialScatterComponent, RendaMulherResponsavelScatterComponent],
+  imports: [IntroductionSectionComponent, FortalMap, IncomeSectionComponent, RaceSectionComponent, EducationSectionComponent, AgeSectionComponent, WomenSectionComponent, ConclusionSectionComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
 export class App {
   protected readonly title = signal('visualizacao-trabalho-final');
 
-  mapElementClickListener(obj:Object){
+  mapElementClickListener(obj: Object) {
 
     console.log(obj)
-    
+
   }
 }

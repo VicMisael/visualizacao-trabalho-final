@@ -15,7 +15,7 @@ type StackedDatum = {
 @Component({
   selector: 'app-idade-sexo-bairros-chart',
   standalone: true,
-  template: `<div #chart></div>`,
+  template: `<div #chart class="w-full"></div>`,
 })
 export class IdadeSexoBairrosChartComponent extends VegaLiteChartBase {
   override createSpec(data: Array<Record<string, unknown>>): VisualizationSpec {
@@ -26,38 +26,62 @@ export class IdadeSexoBairrosChartComponent extends VegaLiteChartBase {
 
     const spec: VisualizationSpec = {
       $schema: 'https://vega.github.io/schema/vega-lite/v6.json',
-      title: 'Distribuição por sexo e faixa etária nos 10 bairros com maior rendimento',
-      width: 400,
-      height: 350,
+
+      title: {
+        text: 'Distribuição por sexo e faixa etária',
+        anchor:'middle'
+      },
       data: { values: dados },
-      transform: [{ fold: faixas, as: ['FaixaEtaria', 'Populacao'] }],
-      mark: { type: 'bar' },
-      encoding: {
-        y: {
-          field: 'bairro',
-          type: 'nominal',
-          sort: top10Renda.map((d) => d.NM_BAIRRO ?? ''),
-        },
-        x: {
-          field: 'Populacao',
-          type: 'quantitative',
-          stack: 'zero',
-        },
-        color: {
-          field: 'FaixaEtaria',
-          type: 'nominal',
-        },
-        column: {
+      padding: 20,
+      autosize: {
+        type: 'fit',
+        contains: 'padding',
+      },
+
+      resolve: {
+        scale: {
+          x: 'shared',
+          y: 'shared'
+        }
+      },
+
+      transform: [
+        { fold: faixas, as: ['FaixaEtaria', 'Populacao'] }
+      ],
+
+      facet: {
+        row: {
           field: 'sexo',
           type: 'nominal',
-        },
-        tooltip: [
-          { field: 'bairro', type: 'nominal' },
-          { field: 'sexo', type: 'nominal' },
-          { field: 'FaixaEtaria', type: 'nominal' },
-          { field: 'Populacao', type: 'quantitative' },
-        ],
+          title: null
+        }
       },
+
+      spec: {
+        mark: 'bar',
+        encoding: {
+          y: {
+            field: 'bairro',
+            type: 'nominal',
+            sort: top10Renda.map(d => d.NM_BAIRRO ?? '')
+          },
+          x: {
+            field: 'Populacao',
+            type: 'quantitative',
+            stack: 'zero'
+          },
+          color: {
+            field: 'FaixaEtaria',
+            type: 'nominal'
+          },
+          tooltip: [
+            { field: 'bairro', type: 'nominal' },
+            { field: 'sexo', type: 'nominal' },
+            { field: 'FaixaEtaria', type: 'nominal' },
+            { field: 'Populacao', type: 'quantitative' }
+          ]
+        }
+      }
     };
 
     return spec;
