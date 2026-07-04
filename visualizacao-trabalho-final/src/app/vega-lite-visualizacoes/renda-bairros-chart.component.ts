@@ -16,8 +16,12 @@ export class RendaBairrosChartComponent extends VegaLiteChartBase {
     const spec: VisualizationSpec = {
       $schema: 'https://vega.github.io/schema/vega-lite/v6.json',
       title: 'Top 10 bairros com maior rendimento',
-      width: 800,
       height: 300,
+      padding: 20,
+      autosize: {
+        type: 'fit',
+        contains: 'padding',
+      },
       data: { values: top10Renda },
       mark: { type: 'bar', tooltip: true, color: '#4E79A7' },
       encoding: {

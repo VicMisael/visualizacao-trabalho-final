@@ -70,9 +70,13 @@ export class RendaMulherResponsavelScatterComponent extends VegaLiteChartBase {
 
     const spec: VisualizationSpec = {
       $schema: 'https://vega.github.io/schema/vega-lite/v6.json',
-      title: 'Correlação entre Rendimento Nominal Médio e Proporção de Mulheres Responsáveis pelo Domicílio nos Bairros de Fortaleza',
-      width: 650,
+      title: 'Correlação entre Renda e Proporção de Chefia Feminina',
       height: 450,
+      padding: 20,
+      autosize: {
+        type: 'fit',
+        contains: 'padding',
+      },
       layer: [points, regression],
     };
 
