@@ -11,7 +11,10 @@
 
     <aside class="sticky top-4 h-[calc(100vh-2rem)]">
 
-      <fortal-map (elementClicked)="mapElementClickListener($event)">
+      <fortal-map
+        (elementClicked)="mapElementClickListener($event)"
+        (selectedBairros)="selectedBairrosListener($event)"
+      >
       </fortal-map>
 
     </aside>

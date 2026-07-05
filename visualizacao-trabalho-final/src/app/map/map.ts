@@ -27,6 +27,7 @@ export class FortalMap {
   automaticDrilldown = model(false);
 
   elementClicked = output<FortalezaMapFeature>();
+  selectedBairros = output<string[]>();
 
   private readonly mapContainer = viewChild.required<ElementRef<HTMLDivElement>>('mapContainer');
   private readonly geoData = inject(GeoDataService);
@@ -158,7 +159,8 @@ export class FortalMap {
       .attr('d', path)
       .attr('fill', fillColor)
       .attr('stroke', '#38514a')
-      .attr('stroke-width', 0.6);
+      .attr('stroke-width', 0.6)
+      .on('click', (event, feature) => this.handleFeatureClick(event, feature, DrillLevel.DISTRITOS));
 
     this.mapReady = true;
   }
@@ -221,14 +223,71 @@ export class FortalMap {
       .attr('fill', fillColor)
       .attr('stroke', '#38514a')
       .attr('stroke-width', 0.6)
-      .on('click', (event, feature) => this.handleFeatureClick(event, feature));
+      .on('click', (event, feature) => this.handleFeatureClick(event, feature, drillLevel));
 
   }
 
-  private handleFeatureClick(event: MouseEvent, feature: FortalezaMapFeature): void {
+  private handleFeatureClick(
+    event: MouseEvent,
+    feature: FortalezaMapFeature,
+    drillLevel: DrillLevel,
+  ): void {
     event.stopPropagation();
     this.elementClicked.emit(feature);
+    void this.emitSelectedBairros(feature, drillLevel);
     this.zoomToFeature(feature);
+  }
+
+  private async emitSelectedBairros(
+    feature: FortalezaMapFeature,
+    drillLevel: DrillLevel,
+  ): Promise<void> {
+    this.selectedBairros.emit(await this.getSelectedBairroCodes(feature, drillLevel));
+  }
+
+  private async getSelectedBairroCodes(
+    feature: FortalezaMapFeature,
+    drillLevel: DrillLevel,
+  ): Promise<string[]> {
+    switch (drillLevel) {
+      case DrillLevel.DISTRITOS:
+        return this.getBairroCodesByPrefix('CD_DIST', feature.properties?.CD_DIST);
+      case DrillLevel.SUBDISTRITOS:
+        return this.getBairroCodesByPrefix('CD_SUBDIST', feature.properties?.CD_SUBDIST);
+      case DrillLevel.BAIRRO:
+        return this.toCodeList(feature.properties?.CD_BAIRRO);
+      case DrillLevel.SETORES:
+        return this.toCodeList(feature.properties?.CD_BAIRRO);
+    }
+  }
+
+  private async getBairroCodesByPrefix(
+    prefixField: keyof FortalezaMapFeature['properties'],
+    prefixValue: unknown,
+  ): Promise<string[]> {
+    const prefix = this.normalizeCode(prefixValue);
+
+    if (!prefix) {
+      return [];
+    }
+
+    const bairros = (await this.geoData.loadLayer(DrillLevel.BAIRRO)) as FortalezaFeatureCollection;
+    const bairroCodes = bairros.features
+      .filter((bairro) => this.normalizeCode(bairro.properties?.[prefixField]).startsWith(prefix))
+      .map((bairro) => this.normalizeCode(bairro.properties?.CD_BAIRRO))
+      .filter((code): code is string => code.length > 0);
+
+    return [...new Set(bairroCodes)];
+  }
+
+  private toCodeList(value: unknown): string[] {
+    const code = this.normalizeCode(value);
+
+    return code ? [code] : [];
+  }
+
+  private normalizeCode(value: unknown): string {
+    return value == null ? '' : String(value).trim();
   }
 
   private clearDetailLayer(): void {

@@ -22,4 +22,10 @@ export class App {
     console.log(obj)
 
   }
+
+  selectedBairrosListener(cdBairros: string[]) {
+
+    console.log(cdBairros)
+
+  }
 }
