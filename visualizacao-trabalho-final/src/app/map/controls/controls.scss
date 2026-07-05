@@ -1,9 +1,9 @@
 .drill-control {
   display: flex;
   flex-direction: column;
-  gap: 0.55rem;
-  width: min(24rem, calc(100vw - 2rem));
-  padding: 0.7rem;
+  gap: 0.4rem;
+  width: min(17rem, calc(100vw - 2rem));
+  padding: 0.5rem;
   border: 1px solid #cbd8d1;
   border-radius: 8px;
   background: #ffffff;
@@ -15,11 +15,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 .drill-control__title {
-  font-size: 0.82rem;
+  font-size: 0.7rem;
   font-weight: 700;
   line-height: 1.2;
   text-transform: uppercase;
@@ -27,12 +27,12 @@
 
 .drill-control__mode,
 .drill-control__button {
-  min-height: 2rem;
+  min-height: 1.65rem;
   border: 1px solid #b9c9c0;
   border-radius: 6px;
   cursor: pointer;
   font: inherit;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   line-height: 1;
   transition:
     background-color 140ms ease,
@@ -41,8 +41,8 @@
 }
 
 .drill-control__mode {
-  flex: 0 0 6.75rem;
-  padding: 0.35rem 0.6rem;
+  flex: 0 0 5.5rem;
+  padding: 0.25rem 0.45rem;
   background: #2f6f61;
   color: #ffffff;
   font-weight: 700;
@@ -57,11 +57,11 @@
 .drill-control__options {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.45rem;
+  gap: 0.35rem;
 }
 
 .drill-control__button {
-  padding: 0.35rem 0.65rem;
+  padding: 0.25rem 0.45rem;
   background: #f5f8f6;
   color: #243a34;
 }

@@ -19,7 +19,8 @@ export class Controls {
   ];
 
   protected selectDrillLevel(drillLevel: DrillLevel): void {
-    this.drillLevel.set(drillLevel);
+    if(!this.automaticDrilldown())
+      this.drillLevel.set(drillLevel);
   }
 
   protected toggleAutomaticDrilldown(): void {

@@ -3,6 +3,7 @@ import * as d3 from 'd3';
 import { GeoDataService } from '../../core/services/geo-data';
 import { DrillLevel } from '../../core/models/drill-level';
 import { Controls } from './controls/controls';
+import { Description } from './description/description';
 import { FortalezaFeatureCollection, FortalezaMapFeature } from './map.types';
 import { SubdivisionDataService } from '../../core/services/subdivision-data';
 import { SimplifiedCensusRow } from '../../core/models/public-data.models';
@@ -16,14 +17,14 @@ type MapMetric = {
 
 @Component({
   selector: 'fortal-map',
-  imports: [Controls],
+  imports: [Controls, Description],
   templateUrl: './map.html',
   styleUrl: './map.scss',
 })
 export class FortalMap {
 
   currentDrillDownLevel = model<DrillLevel>(DrillLevel.DISTRITOS);
-  automaticDrilldown = model(true);
+  automaticDrilldown = model(false);
 
   elementClicked = output<FortalezaMapFeature>();
 

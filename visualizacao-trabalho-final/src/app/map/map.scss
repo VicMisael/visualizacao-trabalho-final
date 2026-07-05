@@ -14,8 +14,12 @@
   position: absolute;
   z-index: 1;
   top: 1rem;
-  left: 1rem;
-  right: auto;
+  right: 1rem;
+  bottom: auto;
+  left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
   max-width: calc(100% - 2rem);
 }
 
@@ -28,7 +32,7 @@
 @media (max-width: 640px) {
   .map-controls {
     top: 0.75rem;
-    left: 0.75rem;
+    right: 0.75rem;
     max-width: calc(100% - 1.5rem);
   }
 }
