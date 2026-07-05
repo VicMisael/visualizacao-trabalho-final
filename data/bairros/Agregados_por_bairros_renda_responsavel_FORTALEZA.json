@@ -1,0 +1,1212 @@
+[
+  {
+    "CD_BAIRRO": 2304400001,
+    "NM_BAIRRO": "São Gerardo",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 5622,
+    "Moradores em domicílios particulares permanentes ocupados": 15759,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,75",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "5344,28",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "29404122,83",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 4000
+  },
+  {
+    "CD_BAIRRO": 2304400002,
+    "NM_BAIRRO": "Aldeota",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 16288,
+    "Moradores em domicílios particulares permanentes ocupados": 42545,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,59",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "10572,06",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "107208080,41",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 8000
+  },
+  {
+    "CD_BAIRRO": 2304400003,
+    "NM_BAIRRO": "Álvaro Weyne",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 7571,
+    "Moradores em domicílios particulares permanentes ocupados": 21798,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,16",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2176,09",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "5321378,91",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1220
+  },
+  {
+    "CD_BAIRRO": 2304400004,
+    "NM_BAIRRO": "Amadeu Furtado",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 3392,
+    "Moradores em domicílios particulares permanentes ocupados": 9626,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,23",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3660,3",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "23752252,67",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 2000
+  },
+  {
+    "CD_BAIRRO": 2304400005,
+    "NM_BAIRRO": "Moura Brasil",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 1059,
+    "Moradores em domicílios particulares permanentes ocupados": 3026,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,62",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1535,84",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3761027,42",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400006,
+    "NM_BAIRRO": "Barra do Ceará",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 21699,
+    "Moradores em domicílios particulares permanentes ocupados": 63412,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,17",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1606,63",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "4070377,18",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400007,
+    "NM_BAIRRO": "Benfica",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 4938,
+    "Moradores em domicílios particulares permanentes ocupados": 12424,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,77",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "5693,63",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "144180130,35",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 3500
+  },
+  {
+    "CD_BAIRRO": 2304400008,
+    "NM_BAIRRO": "Bom Futuro",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 1943,
+    "Moradores em domicílios particulares permanentes ocupados": 5257,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,87",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3414,66",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "16642041,27",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 2000
+  },
+  {
+    "CD_BAIRRO": 2304400009,
+    "NM_BAIRRO": "Carlito Pamplona",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 8461,
+    "Moradores em domicílios particulares permanentes ocupados": 23602,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,09",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1822,87",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3650528,28",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400010,
+    "NM_BAIRRO": "Centro",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 9962,
+    "Moradores em domicílios particulares permanentes ocupados": 23811,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,96",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "4192,28",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "26891372,45",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 2400
+  },
+  {
+    "CD_BAIRRO": 2304400011,
+    "NM_BAIRRO": "Cocó",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 8521,
+    "Moradores em domicílios particulares permanentes ocupados": 22998,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,48",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "13372,43",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "145248634,75",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 10000
+  },
+  {
+    "CD_BAIRRO": 2304400012,
+    "NM_BAIRRO": "Cristo Redentor",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 8243,
+    "Moradores em domicílios particulares permanentes ocupados": 24580,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,31",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1647,41",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3335152,78",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400013,
+    "NM_BAIRRO": "Damas",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 3928,
+    "Moradores em domicílios particulares permanentes ocupados": 10138,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,69",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "4249,97",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "23287478,19",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 2800
+  },
+  {
+    "CD_BAIRRO": 2304400014,
+    "NM_BAIRRO": "Dionísio Torres",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 5093,
+    "Moradores em domicílios particulares permanentes ocupados": 13803,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,64",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "10489,85",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2823929098,8",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 7000
+  },
+  {
+    "CD_BAIRRO": 2304400015,
+    "NM_BAIRRO": "Farias Brito",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 3752,
+    "Moradores em domicílios particulares permanentes ocupados": 10379,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,1",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2962,88",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "10892290,55",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1800
+  },
+  {
+    "CD_BAIRRO": 2304400016,
+    "NM_BAIRRO": "Fátima",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 8612,
+    "Moradores em domicílios particulares permanentes ocupados": 23053,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,72",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "7408,88",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "48073552,33",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 5000
+  },
+  {
+    "CD_BAIRRO": 2304400017,
+    "NM_BAIRRO": "Floresta",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 8584,
+    "Moradores em domicílios particulares permanentes ocupados": 24287,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,24",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1507,12",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1531724,27",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400018,
+    "NM_BAIRRO": "Jacarecanga",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 4693,
+    "Moradores em domicílios particulares permanentes ocupados": 12850,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": 2,
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "4012,54",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1338801941,17",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 2000
+  },
+  {
+    "CD_BAIRRO": 2304400019,
+    "NM_BAIRRO": "Jardim América",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 3796,
+    "Moradores em domicílios particulares permanentes ocupados": 10284,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,01",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3583,6",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3810337301,55",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1450
+  },
+  {
+    "CD_BAIRRO": 2304400020,
+    "NM_BAIRRO": "Jardim Guanabara",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 4055,
+    "Moradores em domicílios particulares permanentes ocupados": 12299,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,19",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1914,5",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2992821,11",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400021,
+    "NM_BAIRRO": "Jardim Iracema",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 6652,
+    "Moradores em domicílios particulares permanentes ocupados": 18997,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,17",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1632,38",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2255888,51",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400022,
+    "NM_BAIRRO": "Joaquim Távora",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 8063,
+    "Moradores em domicílios particulares permanentes ocupados": 20688,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,84",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "4989,02",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "34091783,14",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 3000
+  },
+  {
+    "CD_BAIRRO": 2304400023,
+    "NM_BAIRRO": "José Bonifácio",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 3342,
+    "Moradores em domicílios particulares permanentes ocupados": 8539,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,93",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "4645,42",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 25048972,
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 3000
+  },
+  {
+    "CD_BAIRRO": 2304400024,
+    "NM_BAIRRO": "Meireles",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 16177,
+    "Moradores em domicílios particulares permanentes ocupados": 38359,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,46",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "12148,1",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "203741087,76",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 10000
+  },
+  {
+    "CD_BAIRRO": 2304400025,
+    "NM_BAIRRO": "Monte Castelo",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 3967,
+    "Moradores em domicílios particulares permanentes ocupados": 11267,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,17",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2800,77",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "10169181,01",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1600
+  },
+  {
+    "CD_BAIRRO": 2304400026,
+    "NM_BAIRRO": "Mucuripe",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 5329,
+    "Moradores em domicílios particulares permanentes ocupados": 13764,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,71",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "8100,2",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "103244222,1",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 4500
+  },
+  {
+    "CD_BAIRRO": 2304400027,
+    "NM_BAIRRO": "Papicu",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 7799,
+    "Moradores em domicílios particulares permanentes ocupados": 20671,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,83",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "6387,14",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "171866262,04",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 3000
+  },
+  {
+    "CD_BAIRRO": 2304400028,
+    "NM_BAIRRO": "Parque Araxá",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 2167,
+    "Moradores em domicílios particulares permanentes ocupados": 6090,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,26",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3080,68",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "11382358,23",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1800
+  },
+  {
+    "CD_BAIRRO": 2304400029,
+    "NM_BAIRRO": "Parquelândia",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 4864,
+    "Moradores em domicílios particulares permanentes ocupados": 12821,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,03",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "4206,72",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "22406604,71",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 2500
+  },
+  {
+    "CD_BAIRRO": 2304400030,
+    "NM_BAIRRO": "Parreão",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 3172,
+    "Moradores em domicílios particulares permanentes ocupados": 9032,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,99",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "4676,25",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "25049194,59",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 3000
+  },
+  {
+    "CD_BAIRRO": 2304400031,
+    "NM_BAIRRO": "Pirambu",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 4759,
+    "Moradores em domicílios particulares permanentes ocupados": 14158,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,48",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1405,69",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1375446,56",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400032,
+    "NM_BAIRRO": "Praia de Iracema",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 1242,
+    "Moradores em domicílios particulares permanentes ocupados": 3015,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,91",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "6541,06",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "209314296,1",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 4000
+  },
+  {
+    "CD_BAIRRO": 2304400033,
+    "NM_BAIRRO": "Presidente Kennedy",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 8108,
+    "Moradores em domicílios particulares permanentes ocupados": 22586,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,92",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3381,93",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "48455528,23",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1800
+  },
+  {
+    "CD_BAIRRO": 2304400034,
+    "NM_BAIRRO": "Rodolfo Teófilo",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 5804,
+    "Moradores em domicílios particulares permanentes ocupados": 16056,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,14",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2915,06",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "12680726,16",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1620
+  },
+  {
+    "CD_BAIRRO": 2304400035,
+    "NM_BAIRRO": "São João do Tauape",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 8801,
+    "Moradores em domicílios particulares permanentes ocupados": 23404,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,88",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3486,64",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "27208268,7",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1600
+  },
+  {
+    "CD_BAIRRO": 2304400036,
+    "NM_BAIRRO": "Varjota",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 2592,
+    "Moradores em domicílios particulares permanentes ocupados": 6703,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,88",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "8044,75",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "86424071,17",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 5000
+  },
+  {
+    "CD_BAIRRO": 2304400037,
+    "NM_BAIRRO": "Vicente Pinzón",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 15540,
+    "Moradores em domicílios particulares permanentes ocupados": 46060,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,23",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2241,61",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "13085647,73",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400038,
+    "NM_BAIRRO": "Ellery",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 2351,
+    "Moradores em domicílios particulares permanentes ocupados": 6784,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,07",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2695,79",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "9636502,23",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1600
+  },
+  {
+    "CD_BAIRRO": 2304400039,
+    "NM_BAIRRO": "Vila Velha",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 17747,
+    "Moradores em domicílios particulares permanentes ocupados": 52770,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,26",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1960,13",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "4024483,12",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400040,
+    "NM_BAIRRO": "Antônio Bezerra",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 7881,
+    "Moradores em domicílios particulares permanentes ocupados": 23166,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,07",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2165,14",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "5725646,71",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1300
+  },
+  {
+    "CD_BAIRRO": 2304400041,
+    "NM_BAIRRO": "Autran Nunes",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 6152,
+    "Moradores em domicílios particulares permanentes ocupados": 18699,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,34",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1428,04",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1072026,42",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400042,
+    "NM_BAIRRO": "Conjunto Ceará I",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 6082,
+    "Moradores em domicílios particulares permanentes ocupados": 17592,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,04",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2505,8",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "10570724,39",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1500
+  },
+  {
+    "CD_BAIRRO": 2304400043,
+    "NM_BAIRRO": "Dom Lustosa",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 4319,
+    "Moradores em domicílios particulares permanentes ocupados": 12370,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,02",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2016,42",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "5079887,41",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400044,
+    "NM_BAIRRO": "Genibaú",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 12199,
+    "Moradores em domicílios particulares permanentes ocupados": 35417,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,15",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1272,25",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "942532,43",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400045,
+    "NM_BAIRRO": "Henrique Jorge",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 8478,
+    "Moradores em domicílios particulares permanentes ocupados": 24385,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,03",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2245,68",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "6611700,75",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400046,
+    "NM_BAIRRO": "João XXIII",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 5803,
+    "Moradores em domicílios particulares permanentes ocupados": 16464,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,98",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1918,43",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "4235061,62",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400047,
+    "NM_BAIRRO": "Padre Andrade",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 3768,
+    "Moradores em domicílios particulares permanentes ocupados": 10845,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,06",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2177,08",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 7387078,
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400048,
+    "NM_BAIRRO": "Quintino Cunha",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 10285,
+    "Moradores em domicílios particulares permanentes ocupados": 30300,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,08",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1636,15",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3644932,07",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400049,
+    "NM_BAIRRO": "José de Alencar",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 4869,
+    "Moradores em domicílios particulares permanentes ocupados": 14613,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,04",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "4854,98",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "52653330,15",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1500
+  },
+  {
+    "CD_BAIRRO": 2304400050,
+    "NM_BAIRRO": "Ancuri",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 2562,
+    "Moradores em domicílios particulares permanentes ocupados": 7559,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,02",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1404,11",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2206795,67",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400051,
+    "NM_BAIRRO": "Barroso",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 10706,
+    "Moradores em domicílios particulares permanentes ocupados": 31461,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,14",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1567,15",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2942858,31",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400052,
+    "NM_BAIRRO": "Cajazeiras",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 4949,
+    "Moradores em domicílios particulares permanentes ocupados": 13736,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,9",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2759,79",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "12044762,04",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1500
+  },
+  {
+    "CD_BAIRRO": 2304400053,
+    "NM_BAIRRO": "Cambeba",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 3162,
+    "Moradores em domicílios particulares permanentes ocupados": 8744,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,75",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "7488,94",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2554362723,42",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 4776
+  },
+  {
+    "CD_BAIRRO": 2304400054,
+    "NM_BAIRRO": "Cidade dos Funcionários",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 5586,
+    "Moradores em domicílios particulares permanentes ocupados": 15441,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,87",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "4774,82",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "30315668,68",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 3000
+  },
+  {
+    "CD_BAIRRO": 2304400055,
+    "NM_BAIRRO": "Coaçu",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 2456,
+    "Moradores em domicílios particulares permanentes ocupados": 7131,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,83",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2068,26",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "5524111,04",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400056,
+    "NM_BAIRRO": "Curió",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 2329,
+    "Moradores em domicílios particulares permanentes ocupados": 6515,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,09",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2103,38",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "11874076,27",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400057,
+    "NM_BAIRRO": "Edson Queiroz",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 8446,
+    "Moradores em domicílios particulares permanentes ocupados": 24841,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,13",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3868,77",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "34735286,15",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1300
+  },
+  {
+    "CD_BAIRRO": 2304400058,
+    "NM_BAIRRO": "Engenheiro Luciano Cavalcante",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 7922,
+    "Moradores em domicílios particulares permanentes ocupados": 21710,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,79",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "7003,12",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "80278372,82",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 4000
+  },
+  {
+    "CD_BAIRRO": 2304400059,
+    "NM_BAIRRO": "Guajeru",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 2242,
+    "Moradores em domicílios particulares permanentes ocupados": 6431,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,77",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2259,41",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "5856317,69",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400060,
+    "NM_BAIRRO": "Guararapes",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 2683,
+    "Moradores em domicílios particulares permanentes ocupados": 7642,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,55",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "14775,21",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "171204365,19",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 10000.5
+  },
+  {
+    "CD_BAIRRO": 2304400061,
+    "NM_BAIRRO": "Jangurussu",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 24421,
+    "Moradores em domicílios particulares permanentes ocupados": 70637,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,95",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1691,16",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3865417,49",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400062,
+    "NM_BAIRRO": "Jardim das Oliveiras",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 9110,
+    "Moradores em domicílios particulares permanentes ocupados": 26298,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,19",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1806,71",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "5141060,23",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400063,
+    "NM_BAIRRO": "Lagoa Redonda",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 10500,
+    "Moradores em domicílios particulares permanentes ocupados": 30294,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,04",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2147,56",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "8069398,89",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400064,
+    "NM_BAIRRO": "Sapiranga / Coité",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 9615,
+    "Moradores em domicílios particulares permanentes ocupados": 29199,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,08",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3335,9",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "27614043,99",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400065,
+    "NM_BAIRRO": "Messejana",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 15766,
+    "Moradores em domicílios particulares permanentes ocupados": 43122,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,92",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2854,13",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "10933271,47",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1600
+  },
+  {
+    "CD_BAIRRO": 2304400066,
+    "NM_BAIRRO": "Parque Iracema",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 5154,
+    "Moradores em domicílios particulares permanentes ocupados": 13669,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,54",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "8211,16",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "61357423,57",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 6000
+  },
+  {
+    "CD_BAIRRO": 2304400067,
+    "NM_BAIRRO": "Parque Manibura",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 2016,
+    "Moradores em domicílios particulares permanentes ocupados": 5938,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,02",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "5186,83",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "36938339,91",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 3000
+  },
+  {
+    "CD_BAIRRO": 2304400068,
+    "NM_BAIRRO": "Paupina",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 9447,
+    "Moradores em domicílios particulares permanentes ocupados": 26414,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,81",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1859,75",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3500388,47",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400069,
+    "NM_BAIRRO": "Pedras",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 6304,
+    "Moradores em domicílios particulares permanentes ocupados": 17101,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,76",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1580,95",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3668566,08",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400070,
+    "NM_BAIRRO": "Sabiaguaba",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 1147,
+    "Moradores em domicílios particulares permanentes ocupados": 3442,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,09",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2629,56",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "20070696,29",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1300
+  },
+  {
+    "CD_BAIRRO": 2304400071,
+    "NM_BAIRRO": "Salinas",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 1735,
+    "Moradores em domicílios particulares permanentes ocupados": 4837,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,82",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "6295,21",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "55142782,76",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 3597
+  },
+  {
+    "CD_BAIRRO": 2304400072,
+    "NM_BAIRRO": "Bom Jardim",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 11568,
+    "Moradores em domicílios particulares permanentes ocupados": 33687,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,11",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1342,03",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1152007,17",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400073,
+    "NM_BAIRRO": "Bonsucesso",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 12521,
+    "Moradores em domicílios particulares permanentes ocupados": 35750,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": 2,
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1643,32",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3325843,93",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400074,
+    "NM_BAIRRO": "Canindezinho",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 12644,
+    "Moradores em domicílios particulares permanentes ocupados": 37073,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,08",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1343,37",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2113039,03",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400075,
+    "NM_BAIRRO": "Conjunto Ceará II",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 7396,
+    "Moradores em domicílios particulares permanentes ocupados": 21578,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,93",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2194,22",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "5090969,44",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1300
+  },
+  {
+    "CD_BAIRRO": 2304400076,
+    "NM_BAIRRO": "Conjunto Esperança",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 4556,
+    "Moradores em domicílios particulares permanentes ocupados": 12726,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,78",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1794,34",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2550249,38",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400077,
+    "NM_BAIRRO": "Dendê",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 4965,
+    "Moradores em domicílios particulares permanentes ocupados": 13436,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,64",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3107,82",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "18330569,13",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1900
+  },
+  {
+    "CD_BAIRRO": 2304400078,
+    "NM_BAIRRO": "Granja Lisboa",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 21182,
+    "Moradores em domicílios particulares permanentes ocupados": 63403,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,14",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1404,64",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1531946,98",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400079,
+    "NM_BAIRRO": "Granja Portugal",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 12360,
+    "Moradores em domicílios particulares permanentes ocupados": 36615,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,28",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1475,71",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1738780,59",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400080,
+    "NM_BAIRRO": "Jardim Cearense",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 3843,
+    "Moradores em domicílios particulares permanentes ocupados": 10876,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,86",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2973,13",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "11274444,7",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1600
+  },
+  {
+    "CD_BAIRRO": 2304400081,
+    "NM_BAIRRO": "Manoel Sátiro",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 5536,
+    "Moradores em domicílios particulares permanentes ocupados": 16062,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": 2,
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1770,9",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3019274,29",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400082,
+    "NM_BAIRRO": "Maraponga",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 4631,
+    "Moradores em domicílios particulares permanentes ocupados": 12404,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,63",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3550,24",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "14471147,35",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 2424
+  },
+  {
+    "CD_BAIRRO": 2304400083,
+    "NM_BAIRRO": "Mondubim",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 21782,
+    "Moradores em domicílios particulares permanentes ocupados": 62228,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,85",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2377,15",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "9454229,78",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1245
+  },
+  {
+    "CD_BAIRRO": 2304400084,
+    "NM_BAIRRO": "Parque Dois Irmãos",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 11114,
+    "Moradores em domicílios particulares permanentes ocupados": 32046,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,94",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2229,66",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "6583801,51",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400085,
+    "NM_BAIRRO": "Parque Presidente Vargas",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 3608,
+    "Moradores em domicílios particulares permanentes ocupados": 10904,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,07",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1381,01",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1225366,09",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400086,
+    "NM_BAIRRO": "Parque São José",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 2706,
+    "Moradores em domicílios particulares permanentes ocupados": 7641,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,17",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1513,25",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2670651,6",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400087,
+    "NM_BAIRRO": "Parque Santa Rosa",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 4154,
+    "Moradores em domicílios particulares permanentes ocupados": 11792,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,77",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1631,19",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1937161,66",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400088,
+    "NM_BAIRRO": "Passaré",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 19287,
+    "Moradores em domicílios particulares permanentes ocupados": 54693,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,86",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2807,27",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "12552167,96",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1300
+  },
+  {
+    "CD_BAIRRO": 2304400089,
+    "NM_BAIRRO": "Prefeito José Walter",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 19629,
+    "Moradores em domicílios particulares permanentes ocupados": 53427,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,79",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2003,26",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "6757431,29",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400090,
+    "NM_BAIRRO": "Siqueira",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 15374,
+    "Moradores em domicílios particulares permanentes ocupados": 45433,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,05",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1460,33",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1875502,29",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400091,
+    "NM_BAIRRO": "Aerolândia",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 3536,
+    "Moradores em domicílios particulares permanentes ocupados": 9363,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,91",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1606,55",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "4744844,71",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1200
+  },
+  {
+    "CD_BAIRRO": 2304400092,
+    "NM_BAIRRO": "Aeroporto",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 3119,
+    "Moradores em domicílios particulares permanentes ocupados": 8989,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,18",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1560,2",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1813184,09",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400093,
+    "NM_BAIRRO": "Alto da Balança",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 3840,
+    "Moradores em domicílios particulares permanentes ocupados": 10377,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,08",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1739,54",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2527168,39",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400094,
+    "NM_BAIRRO": "Bela Vista",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 5311,
+    "Moradores em domicílios particulares permanentes ocupados": 14641,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,16",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2163,64",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "5011141,5",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1300
+  },
+  {
+    "CD_BAIRRO": 2304400096,
+    "NM_BAIRRO": "Couto Fernandes",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 1790,
+    "Moradores em domicílios particulares permanentes ocupados": 4645,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,79",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1964,89",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "4925831,37",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1300
+  },
+  {
+    "CD_BAIRRO": 2304400097,
+    "NM_BAIRRO": "Demócrito Rocha",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 3772,
+    "Moradores em domicílios particulares permanentes ocupados": 10450,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,94",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2174,53",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "6841707,68",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400098,
+    "NM_BAIRRO": "Dias Macedo",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 4258,
+    "Moradores em domicílios particulares permanentes ocupados": 11837,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,08",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1647,12",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2515247,9",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400099,
+    "NM_BAIRRO": "Itaoca",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 3860,
+    "Moradores em domicílios particulares permanentes ocupados": 10543,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,9",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2186,75",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "4130855,29",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1300
+  },
+  {
+    "CD_BAIRRO": 2304400100,
+    "NM_BAIRRO": "Itaperi",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 8174,
+    "Moradores em domicílios particulares permanentes ocupados": 22209,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,83",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2989,39",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "13905633,79",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1700
+  },
+  {
+    "CD_BAIRRO": 2304400101,
+    "NM_BAIRRO": "Jóquei Clube",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 7516,
+    "Moradores em domicílios particulares permanentes ocupados": 20240,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,84",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3059,4",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "9375084,9",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 2000
+  },
+  {
+    "CD_BAIRRO": 2304400103,
+    "NM_BAIRRO": "Montese",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 8175,
+    "Moradores em domicílios particulares permanentes ocupados": 21748,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,95",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2770,84",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "7782090,59",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1900
+  },
+  {
+    "CD_BAIRRO": 2304400104,
+    "NM_BAIRRO": "Panamericano",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 3078,
+    "Moradores em domicílios particulares permanentes ocupados": 8580,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,94",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2063,16",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "4446008,01",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400105,
+    "NM_BAIRRO": "Parangaba",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 10282,
+    "Moradores em domicílios particulares permanentes ocupados": 27952,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,92",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2620,58",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "7890486,25",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1500
+  },
+  {
+    "CD_BAIRRO": 2304400106,
+    "NM_BAIRRO": "Pici",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 13330,
+    "Moradores em domicílios particulares permanentes ocupados": 38350,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,18",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1861,75",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "7853436,77",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400107,
+    "NM_BAIRRO": "Serrinha",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 9736,
+    "Moradores em domicílios particulares permanentes ocupados": 27802,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,12",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1794,06",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3646393,75",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400108,
+    "NM_BAIRRO": "Vila Peri",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 6381,
+    "Moradores em domicílios particulares permanentes ocupados": 17550,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,01",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1882,42",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3634580,53",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400109,
+    "NM_BAIRRO": "Vila União",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 4712,
+    "Moradores em domicílios particulares permanentes ocupados": 13209,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,99",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3332,63",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "17897886,86",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1700
+  },
+  {
+    "CD_BAIRRO": 2304400110,
+    "NM_BAIRRO": "Cais do Porto",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 7790,
+    "Moradores em domicílios particulares permanentes ocupados": 22730,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,15",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1440,15",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1405824,87",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400111,
+    "NM_BAIRRO": "Cidade 2000",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 3081,
+    "Moradores em domicílios particulares permanentes ocupados": 7835,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,78",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3382,89",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "17531051,81",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 2000
+  },
+  {
+    "CD_BAIRRO": 2304400112,
+    "NM_BAIRRO": "Manuel Dias Branco",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 2795,
+    "Moradores em domicílios particulares permanentes ocupados": 7759,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,91",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "4113,55",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "50168887,24",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1366
+  },
+  {
+    "CD_BAIRRO": 2304400113,
+    "NM_BAIRRO": "Praia do Futuro I",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 1551,
+    "Moradores em domicílios particulares permanentes ocupados": 4329,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,28",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3488,82",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "34962657,91",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400114,
+    "NM_BAIRRO": "Praia do Futuro II",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 4444,
+    "Moradores em domicílios particulares permanentes ocupados": 12355,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,04",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1945,49",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "8095711,18",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400115,
+    "NM_BAIRRO": "De Lourdes",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 753,
+    "Moradores em domicílios particulares permanentes ocupados": 2310,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,11",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "12383,27",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "173619134,9",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 9100
+  },
+  {
+    "CD_BAIRRO": 2304400116,
+    "NM_BAIRRO": "Planalto Ayrton Senna",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 12832,
+    "Moradores em domicílios particulares permanentes ocupados": 37856,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,12",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1565,45",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1916922,7",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400118,
+    "NM_BAIRRO": "Conjunto Palmeiras",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 9297,
+    "Moradores em domicílios particulares permanentes ocupados": 28209,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,47",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1357,92",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2161079,42",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400119,
+    "NM_BAIRRO": "São Bento",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 4268,
+    "Moradores em domicílios particulares permanentes ocupados": 12234,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,85",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2157,68",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "14419191,71",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400121,
+    "NM_BAIRRO": "Novo Mondubim",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 6560,
+    "Moradores em domicílios particulares permanentes ocupados": 18535,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,81",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1919,44",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2878948,83",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400122,
+    "NM_BAIRRO": "Olavo Oliveira",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 3820,
+    "Moradores em domicílios particulares permanentes ocupados": 11152,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "2,05",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1580,91",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2575738,52",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400123,
+    "NM_BAIRRO": "Parque Santa Maria",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 5166,
+    "Moradores em domicílios particulares permanentes ocupados": 14399,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,82",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "1760,55",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2914889,4",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400124,
+    "NM_BAIRRO": "Aracapé",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 6675,
+    "Moradores em domicílios particulares permanentes ocupados": 18941,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,83",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1668,
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "3019624,9",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1212
+  },
+  {
+    "CD_BAIRRO": 2304400125,
+    "NM_BAIRRO": "Boa Vista / Castelão",
+    "Pessoas responsáveis em domicílios particulares permanentes ocupados": 4550,
+    "Moradores em domicílios particulares permanentes ocupados": 12111,
+    "Variância do número de moradores em domicílios particulares permanentes ocupados": "1,9",
+    "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "2388,03",
+    "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": "6118112,76",
+    "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados": 1500
+  }
+]
