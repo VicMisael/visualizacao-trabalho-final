@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { RacialCompositionChartComponent } from '../../vega-lite-visualizacoes/racial-composition-chart.component';
 import { RacialScatterComponent } from '../../vega-lite-visualizacoes/racial-scatter.component';
 
@@ -9,5 +9,6 @@ import { RacialScatterComponent } from '../../vega-lite-visualizacoes/racial-sca
   templateUrl: './race-section.component.html',
 })
 export class RaceSectionComponent {
+  selectedBairros = input<string[]>([]);
 
 }

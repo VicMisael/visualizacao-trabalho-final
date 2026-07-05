@@ -4,12 +4,14 @@ export type NeighborhoodDatum = {
 };
 
 export type RendaDatum = {
+  CD_BAIRRO?: string | number;
   NM_BAIRRO?: string;
   rendimento: number;
   [key: string]: unknown;
 };
 
 export type ScatterDatum = {
+  cdBairro: string;
   bairro: string;
   rendimento: number;
   populacao: number;
@@ -19,6 +21,7 @@ export type ScatterDatum = {
 };
 
 export type RacialScatterDatum = {
+  cdBairro: string;
   bairro: string;
   rendimento: number;
   populacao: number;
@@ -28,6 +31,7 @@ export type RacialScatterDatum = {
 };
 
 export type MulherResponsavelScatterDatum = {
+  cdBairro: string;
   bairro: string;
   rendimento: number;
   responsaveisHomens: number;

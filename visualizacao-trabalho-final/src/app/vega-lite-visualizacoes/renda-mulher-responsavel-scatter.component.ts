@@ -10,7 +10,11 @@ import { VegaLiteChartBase } from './shared/vega-lite-chart-base';
 })
 export class RendaMulherResponsavelScatterComponent extends VegaLiteChartBase {
   override createSpec(data: Array<Record<string, unknown>>): VisualizationSpec {
-    const dadosScatter = buildWomenResponsibleScatterData(data);
+    const dadosScatter = this.withSelectedFlag(buildWomenResponsibleScatterData(data))
+      .map((d) => ({
+        ...d,
+        grupo: d.selecionado ? 'Selecionado' : d.destaque ? 'Top 10 renda' : 'Outros bairros',
+      }));
 
     const points = {
       data: { values: dadosScatter },
@@ -27,20 +31,23 @@ export class RendaMulherResponsavelScatterComponent extends VegaLiteChartBase {
           title: 'Rendimento Nominal Médio',
         },
         color: {
-          field: 'destaque' as const,
+          field: 'grupo' as const,
           type: 'nominal' as const,
           scale: {
-            domain: [true, false],
-            range: ['#d62728', '#1f77b4'],
+            domain: ['Selecionado', 'Top 10 renda', 'Outros bairros'],
+            range: ['#d62728', '#4E79A7', '#9ca3af'],
           },
           legend: {
             title: 'Grupo',
-            labelExpr: "datum.value ? 'Top 10 renda' : 'Outros bairros'",
           },
         },
+        size: {
+          condition: { test: 'datum.selecionado === true', value: 180 },
+          value: 90,
+        },
         opacity: {
-          condition: { test: 'datum.destaque === true', value: 1 },
-          value: 0.4,
+          condition: { test: 'datum.selecionado === true || datum.destaque === true', value: 1 },
+          value: this.hasSelectedBairros() ? 0.25 : 0.45,
         },
         tooltip: [
           { field: 'bairro' as const, type: 'nominal' as const },

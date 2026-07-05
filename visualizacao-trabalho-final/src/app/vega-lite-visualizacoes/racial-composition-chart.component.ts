@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { VisualizationSpec } from 'vega-embed';
-import { buildTopIncomeNeighborhoods, buildTopNeighborhoods } from './models/chart-data.utils';
+import { parseNumericValue } from './models/chart-data.models';
+import { buildTopIncomeNeighborhoods } from './models/chart-data.utils';
 import { VegaLiteChartBase } from './shared/vega-lite-chart-base';
 
 @Component({
@@ -12,6 +13,14 @@ export class RacialCompositionChartComponent extends VegaLiteChartBase {
   override createSpec(data: Array<Record<string, unknown>>): VisualizationSpec {
     const chaveRenda = 'Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados';
     const top10Renda = buildTopIncomeNeighborhoods(data, chaveRenda);
+    const allRenda = data
+      .map((d) => ({
+        ...d,
+        NM_BAIRRO: typeof d['NM_BAIRRO'] === 'string' ? d['NM_BAIRRO'] : '',
+        rendimento: parseNumericValue(d[chaveRenda]),
+      }))
+      .sort((a, b) => b.rendimento - a.rendimento);
+    const visibleRows = this.withSelectedFlag(this.includeSelectedRows(top10Renda, allRenda));
 
     const spec: VisualizationSpec = {
       $schema: 'https://vega.github.io/schema/vega-lite/v6.json',
@@ -22,7 +31,7 @@ export class RacialCompositionChartComponent extends VegaLiteChartBase {
         type: 'fit',
         contains: 'padding',
       },
-      data: { values: top10Renda },
+      data: { values: visibleRows },
       transform: [
         {
           fold: [
@@ -61,6 +70,10 @@ export class RacialCompositionChartComponent extends VegaLiteChartBase {
           type: 'nominal',
           title: 'Cor/Raça',
           scale: { scheme: 'tableau10' },
+        },
+        opacity: {
+          condition: { test: 'datum.selecionado === true', value: 1 },
+          value: this.hasSelectedBairros() ? 0.45 : 0.9,
         },
       },
     };

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { RendaMulherResponsavelScatterComponent } from '../../vega-lite-visualizacoes/renda-mulher-responsavel-scatter.component';
 
 @Component({
@@ -8,5 +8,6 @@ import { RendaMulherResponsavelScatterComponent } from '../../vega-lite-visualiz
   templateUrl: './women-section.component.html',
 })
 export class WomenSectionComponent {
+  selectedBairros = input<string[]>([]);
 
 }

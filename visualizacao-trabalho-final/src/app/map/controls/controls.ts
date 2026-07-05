@@ -1,4 +1,4 @@
-import { Component, model } from '@angular/core';
+import { Component, model, output } from '@angular/core';
 import { DrillLevel } from '../../../core/models/drill-level';
 
 @Component({
@@ -10,6 +10,7 @@ import { DrillLevel } from '../../../core/models/drill-level';
 export class Controls {
   drillLevel = model.required<DrillLevel>();
   automaticDrilldown = model.required<boolean>();
+  resetCharts = output<void>();
 
   protected readonly drillOptions = [
     { label: 'Distritos', value: DrillLevel.DISTRITOS },
@@ -25,6 +26,10 @@ export class Controls {
 
   protected toggleAutomaticDrilldown(): void {
     this.automaticDrilldown.update((enabled) => !enabled);
+  }
+
+  protected resetChartSelection(): void {
+    this.resetCharts.emit();
   }
 
 }

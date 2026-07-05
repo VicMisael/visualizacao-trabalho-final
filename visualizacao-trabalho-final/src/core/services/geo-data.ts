@@ -23,7 +23,7 @@ export class GeoDataService {
   private async fetchAllLayers(): Promise<void> {
     const entries = await Promise.all(
       Object.entries(layerPaths).map(async ([layer, path]) => {
-        const response = await fetch(path);
+        const response = await fetch(this.resolveAssetUrl(path));
 
         if (!response.ok) {
           throw new Error(`Could not load ${path}: ${response.status}`);
@@ -115,6 +115,10 @@ export class GeoDataService {
     const subdistritos = this.getLayer(DrillLevel.SUBDISTRITOS);
 
     return this.filterByPropertyIn(subdistritos, "CD_DISTRITO", codigoSubdistritos)
+  }
+
+  private resolveAssetUrl(path: string): URL {
+    return new URL(path, document.baseURI);
   }
 
 

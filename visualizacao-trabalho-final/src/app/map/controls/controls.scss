@@ -26,7 +26,8 @@
 }
 
 .drill-control__mode,
-.drill-control__button {
+.drill-control__button,
+.drill-control__reset {
   min-height: 1.65rem;
   border: 1px solid #b9c9c0;
   border-radius: 6px;
@@ -66,6 +67,13 @@
   color: #243a34;
 }
 
+.drill-control__reset {
+  width: 100%;
+  padding: 0.25rem 0.45rem;
+  background: #ffffff;
+  color: #405950;
+}
+
 .drill-control__button--active {
   border-color: #2f6f61;
   background: #2f6f61;
@@ -73,6 +81,7 @@
 }
 
 .drill-control__mode:hover,
-.drill-control__button:hover {
+.drill-control__button:hover,
+.drill-control__reset:hover {
   border-color: #2f6f61;
 }

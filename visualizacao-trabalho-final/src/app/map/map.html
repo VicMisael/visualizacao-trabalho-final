@@ -3,6 +3,7 @@
     <app-controls
       [(drillLevel)]="currentDrillDownLevel"
       [(automaticDrilldown)]="automaticDrilldown"
+      (resetCharts)="resetSelectedBairros()"
     ></app-controls>
     <app-description></app-description>
   </div>
