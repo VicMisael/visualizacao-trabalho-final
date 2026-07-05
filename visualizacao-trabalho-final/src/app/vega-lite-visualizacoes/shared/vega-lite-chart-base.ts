@@ -94,7 +94,11 @@ export abstract class VegaLiteChartBase
   }
 
   protected async loadData(): Promise<Array<Record<string, unknown>>> {
-    const response = await fetch('/data/bairros/Base_Fortaleza_Consolidada.json');
+    const dataUrl = new URL(
+      'data/bairros/Base_Fortaleza_Consolidada.json',
+      document.baseURI,
+    );
+    const response = await fetch(dataUrl);
     return response.json();
   }
 

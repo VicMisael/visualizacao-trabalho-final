@@ -10,7 +10,7 @@ import {
   providedIn: 'root',
 })
 export class SubdivisionDataService {
-  private readonly dataPath = '/data/simplificado';
+  private readonly dataPath = 'data/simplificado';
   private readonly cache = new Map<string, Promise<unknown>>();
 
   async getSubdistritosAsync(cdSubdistritos: string[] = []): Promise<SubdistrictRow[]> {
@@ -57,13 +57,17 @@ export class SubdivisionDataService {
   }
 
   private async loadJson<T>(path: string): Promise<T> {
-    const response = await fetch(path);
+    const response = await fetch(this.resolveAssetUrl(path));
 
     if (!response.ok) {
       throw new Error(`Could not load ${path}: ${response.status}`);
     }
 
     return (await response.json()) as T;
+  }
+
+  private resolveAssetUrl(path: string): URL {
+    return new URL(path, document.baseURI);
   }
 
   private filterByCodes<T extends Record<string, unknown>>(
