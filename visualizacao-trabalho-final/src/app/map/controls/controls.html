@@ -1,8 +1,26 @@
 <div class="drill-control" aria-label="Nivel de detalhamento do mapa">
-  <div> Nivel de Detalhamento do Mapa</div>
-  @for (option of drillOptions; track option.value) {
-  <div class="drill-control__button" [class.drill-control__button--active]="drillLevel() === option.value">
-    {{ option.label }}
+  <div class="drill-control__header">
+    <span class="drill-control__title">Nivel de detalhamento</span>
+    <button
+      class="drill-control__mode"
+      type="button"
+      [class.drill-control__mode--manual]="!automaticDrilldown()"
+      (click)="toggleAutomaticDrilldown()"
+    >
+      {{ automaticDrilldown() ? 'Automatico' : 'Manual' }}
+    </button>
   </div>
-  }
+
+  <div class="drill-control__options">
+    @for (option of drillOptions; track option.value) {
+    <button
+      class="drill-control__button"
+      type="button"
+      [class.drill-control__button--active]="drillLevel() === option.value"
+      (click)="selectDrillLevel(option.value)"
+    >
+      {{ option.label }}
+    </button>
+    }
+  </div>
 </div>

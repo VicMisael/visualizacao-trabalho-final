@@ -9,6 +9,7 @@ import { DrillLevel } from '../../../core/models/drill-level';
 })
 export class Controls {
   drillLevel = model.required<DrillLevel>();
+  automaticDrilldown = model.required<boolean>();
 
   protected readonly drillOptions = [
     { label: 'Distritos', value: DrillLevel.DISTRITOS },
@@ -16,5 +17,13 @@ export class Controls {
     { label: 'Bairros', value: DrillLevel.BAIRRO },
     { label: 'Setores', value: DrillLevel.SETORES },
   ];
+
+  protected selectDrillLevel(drillLevel: DrillLevel): void {
+    this.drillLevel.set(drillLevel);
+  }
+
+  protected toggleAutomaticDrilldown(): void {
+    this.automaticDrilldown.update((enabled) => !enabled);
+  }
 
 }

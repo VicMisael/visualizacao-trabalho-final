@@ -1,6 +1,9 @@
 <div class="map-shell">
   <div class="map-controls">
-    <app-controls [(drillLevel)]="currentDrillDownLevel"></app-controls>
+    <app-controls
+      [(drillLevel)]="currentDrillDownLevel"
+      [(automaticDrilldown)]="automaticDrilldown"
+    ></app-controls>
   </div>
 
   <div class="map-container" #mapContainer></div>

@@ -1,4 +1,4 @@
-import { afterNextRender, Component, DestroyRef, ElementRef, inject, model, output, viewChild } from '@angular/core';
+import { afterNextRender, Component, DestroyRef, effect, ElementRef, inject, model, output, viewChild } from '@angular/core';
 import * as d3 from 'd3';
 import { GeoDataService } from '../../core/services/geo-data';
 import { DrillLevel } from '../../core/models/drill-level';
@@ -23,6 +23,7 @@ type MapMetric = {
 export class FortalMap {
 
   currentDrillDownLevel = model<DrillLevel>(DrillLevel.DISTRITOS);
+  automaticDrilldown = model(true);
 
   elementClicked = output<FortalezaMapFeature>();
 
@@ -54,9 +55,26 @@ export class FortalMap {
   private height = 0;
   private detailFrameId: number | null = null;
   private detailRenderVersion = 0;
+  private mapReady = false;
 
 
   constructor() {
+    effect(() => {
+      this.currentDrillDownLevel();
+
+      if (this.mapReady) {
+        this.scheduleDrawDetail();
+      }
+    });
+
+    effect(() => {
+      const automaticDrilldown = this.automaticDrilldown();
+
+      if (automaticDrilldown && this.mapReady) {
+        this.syncDrilldownWithCurrentZoom();
+      }
+    });
+
     afterNextRender(() => {
       void this.initializeMap();
     });
@@ -140,6 +158,8 @@ export class FortalMap {
       .attr('fill', fillColor)
       .attr('stroke', '#38514a')
       .attr('stroke-width', 0.6);
+
+    this.mapReady = true;
   }
 
   private setupZoom(
@@ -160,9 +180,14 @@ export class FortalMap {
       ])
       .scaleExtent([1, 20])
       .on('zoom', (event) => {
-
         layer.attr('transform', event.transform.toString());
-        this.processZoom(event);
+
+        if (this.automaticDrilldown()) {
+          this.processZoom(event);
+          return;
+        }
+
+        this.scheduleDrawDetail();
       });
 
     svg.call(zoom);
@@ -341,7 +366,20 @@ export class FortalMap {
 
   private processZoom(event: d3.D3ZoomEvent<SVGSVGElement, unknown>): void {
     //console.log("[Zoom level]", event.transform.k);
-    const k = event.transform.k;
+    this.setDrillLevelFromScale(event.transform.k);
+  }
+
+  private syncDrilldownWithCurrentZoom(): void {
+    const svgNode = this.svg?.node();
+
+    if (!svgNode) {
+      return;
+    }
+
+    this.setDrillLevelFromScale(d3.zoomTransform(svgNode).k);
+  }
+
+  private setDrillLevelFromScale(k: number): void {
     let d: DrillLevel = DrillLevel.DISTRITOS;
 
     if (k > 5) {
@@ -358,7 +396,6 @@ export class FortalMap {
     }
 
     this.currentDrillDownLevel.set(d);
-    this.scheduleDrawDetail();
   }
 
   private scheduleDrawDetail(): void {
