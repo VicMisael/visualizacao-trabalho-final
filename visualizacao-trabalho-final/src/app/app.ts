@@ -16,6 +16,7 @@ import { IntroductionSectionComponent } from './story/introduction-section/intro
 })
 export class App {
   protected readonly title = signal('visualizacao-trabalho-final');
+  protected readonly selectedBairros = signal<string[]>([]);
 
   mapElementClickListener(obj: Object) {
 
@@ -25,6 +26,7 @@ export class App {
 
   selectedBairrosListener(cdBairros: string[]) {
 
+    this.selectedBairros.set(cdBairros);
     console.log(cdBairros)
 
   }

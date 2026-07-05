@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { RendaBairrosChartComponent } from '../../vega-lite-visualizacoes/renda-bairros-chart.component';
 
 @Component({
@@ -9,5 +9,6 @@ import { RendaBairrosChartComponent } from '../../vega-lite-visualizacoes/renda-
 //   styleUrl: './income-section.component.scss'
 })
 export class IncomeSectionComponent {
+  selectedBairros = input<string[]>([]);
 
 }

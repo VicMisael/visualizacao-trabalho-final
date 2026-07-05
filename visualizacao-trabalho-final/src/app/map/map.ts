@@ -62,9 +62,13 @@ export class FortalMap {
 
   constructor() {
     effect(() => {
-      this.currentDrillDownLevel();
+      const drillLevel = this.currentDrillDownLevel();
 
       if (this.mapReady) {
+        if (drillLevel === DrillLevel.DISTRITOS) {
+          this.resetSelectedBairros();
+        }
+
         this.scheduleDrawDetail();
       }
     });
@@ -251,7 +255,7 @@ export class FortalMap {
   ): Promise<string[]> {
     switch (drillLevel) {
       case DrillLevel.DISTRITOS:
-        return this.getBairroCodesByPrefix('CD_DIST', feature.properties?.CD_DIST);
+        return [];
       case DrillLevel.SUBDISTRITOS:
         return this.getBairroCodesByPrefix('CD_SUBDIST', feature.properties?.CD_SUBDIST);
       case DrillLevel.BAIRRO:
@@ -288,6 +292,10 @@ export class FortalMap {
 
   private normalizeCode(value: unknown): string {
     return value == null ? '' : String(value).trim();
+  }
+
+  protected resetSelectedBairros(): void {
+    this.selectedBairros.emit([]);
   }
 
   private clearDetailLayer(): void {

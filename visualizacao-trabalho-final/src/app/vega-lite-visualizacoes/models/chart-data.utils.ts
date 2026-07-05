@@ -62,6 +62,7 @@ export function buildLiteracyScatterData(data: Array<Record<string, unknown>>, c
     const taxaAlfabetizacao = populacao > 0 ? (alfabetizados / populacao) * 100 : 0;
 
     return {
+      cdBairro: String(d['CD_BAIRRO'] ?? '').trim(),
       bairro: typeof d['NM_BAIRRO'] === 'string' ? d['NM_BAIRRO'] : '',
       rendimento,
       populacao,
@@ -101,6 +102,7 @@ export function buildRacialScatterData(data: Array<Record<string, unknown>>): Ra
     const proporcaoNegra = populacao > 0 ? (racializados / populacao) * 100 : 0;
 
     return {
+      cdBairro: String(d['CD_BAIRRO'] ?? '').trim(),
       bairro: typeof d['NM_BAIRRO'] === 'string' ? d['NM_BAIRRO'] : '',
       rendimento,
       populacao,
@@ -135,6 +137,7 @@ export function buildWomenResponsibleScatterData(data: Array<Record<string, unkn
     const proporcaoMulheresResponsaveis = totalResponsaveis > 0 ? (responsaveisMulheres / totalResponsaveis) * 100 : 0;
 
     return {
+      cdBairro: String(d['CD_BAIRRO'] ?? '').trim(),
       bairro: typeof d['NM_BAIRRO'] === 'string' ? d['NM_BAIRRO'] : '',
       rendimento,
       responsaveisHomens,

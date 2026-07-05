@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { IdadeSexoBairrosChartComponent } from '../../vega-lite-visualizacoes/idade-sexo-bairros-chart.component';
 
 @Component({
@@ -8,5 +8,6 @@ import { IdadeSexoBairrosChartComponent } from '../../vega-lite-visualizacoes/id
   templateUrl: './age-section.component.html',
 })
 export class AgeSectionComponent {
+  selectedBairros = input<string[]>([]);
 
 }

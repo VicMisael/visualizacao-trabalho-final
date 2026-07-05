@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { ScatterRendimentoAlfabetizacaoComponent } from '../../vega-lite-visualizacoes/scatter-rendimento-alfabetizacao.component';
 
 @Component({
@@ -8,5 +8,6 @@ import { ScatterRendimentoAlfabetizacaoComponent } from '../../vega-lite-visuali
   templateUrl: './education-section.component.html',
 })
 export class EducationSectionComponent {
+  selectedBairros = input<string[]>([]);
 
 }
