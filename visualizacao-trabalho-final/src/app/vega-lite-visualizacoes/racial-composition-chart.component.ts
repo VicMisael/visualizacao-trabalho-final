@@ -69,7 +69,22 @@ export class RacialCompositionChartComponent extends VegaLiteChartBase {
           field: 'Cor',
           type: 'nominal',
           title: 'Cor/Raça',
-          scale: { scheme: 'tableau10' },
+          scale: {
+            domain: [
+              'Cor ou raça é branca',
+              'Cor ou raça é parda',
+              'Cor ou raça é preta',
+              'Cor ou raça é amarela',
+              'Cor ou raça é indígena',
+            ],
+            range: [
+              '#075985', // Branca (azul)
+              '#A67C52', // Parda (marrom)
+              '#2F2F2F', // Preta (cinza escuro)
+              '#FACC15', // Amarela
+              '#16A34A', // Indígena (verde)
+            ],
+          },
         },
         opacity: {
           condition: { test: 'datum.selecionado === true', value: 1 },
